@@ -1,0 +1,106 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "友達と遊ぶなら？",
+      "options": [
+        { "label": "カラオケで盛り上がる", "scores": { "energy": 3, "classic": 0, "unique": 0, "intellectual": 0, "warm": 1 } },
+        { "label": "カフェでまったりトーク", "scores": { "energy": 0, "classic": 1, "unique": 0, "intellectual": 2, "warm": 2 } },
+        { "label": "テーマパークで大はしゃぎ", "scores": { "energy": 3, "classic": 0, "unique": 1, "intellectual": 0, "warm": 1 } },
+        { "label": "映画館でじっくり鑑賞", "scores": { "energy": 0, "classic": 1, "unique": 2, "intellectual": 2, "warm": 0 } }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "笑いのツボはどれに近い？",
+      "options": [
+        { "label": "テンポの速い掛け合い", "scores": { "energy": 2, "classic": 2, "unique": 0, "intellectual": 1, "warm": 0 } },
+        { "label": "予想外のボケ・シュールなネタ", "scores": { "energy": 0, "classic": 0, "unique": 3, "intellectual": 2, "warm": 0 } },
+        { "label": "あるあるネタ・共感系", "scores": { "energy": 0, "classic": 1, "unique": 0, "intellectual": 1, "warm": 3 } },
+        { "label": "体を張ったハイテンション芸", "scores": { "energy": 3, "classic": 0, "unique": 1, "intellectual": 0, "warm": 1 } }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "自分の性格で一番近いのは？",
+      "options": [
+        { "label": "ムードメーカー", "scores": { "energy": 3, "classic": 0, "unique": 0, "intellectual": 0, "warm": 2 } },
+        { "label": "しっかり者のリーダータイプ", "scores": { "energy": 1, "classic": 3, "unique": 0, "intellectual": 1, "warm": 0 } },
+        { "label": "独自の世界観を持つ個性派", "scores": { "energy": 0, "classic": 0, "unique": 3, "intellectual": 1, "warm": 1 } },
+        { "label": "聞き上手で優しい", "scores": { "energy": 0, "classic": 1, "unique": 0, "intellectual": 1, "warm": 3 } }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "好きなテレビ番組のジャンルは？",
+      "options": [
+        { "label": "バラエティ（ワイワイ系）", "scores": { "energy": 3, "classic": 1, "unique": 0, "intellectual": 0, "warm": 1 } },
+        { "label": "ドキュメンタリー・教養番組", "scores": { "energy": 0, "classic": 1, "unique": 1, "intellectual": 3, "warm": 0 } },
+        { "label": "ドラマ・映画", "scores": { "energy": 0, "classic": 0, "unique": 2, "intellectual": 1, "warm": 2 } },
+        { "label": "音楽番組・ライブ映像", "scores": { "energy": 2, "classic": 0, "unique": 1, "intellectual": 0, "warm": 2 } }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "初めてのお笑いライブ、どう楽しみたい？",
+      "options": [
+        { "label": "最前列で声出して笑いたい！", "scores": { "energy": 3, "classic": 0, "unique": 0, "intellectual": 0, "warm": 2 } },
+        { "label": "ネタの構成を分析しながら観たい", "scores": { "energy": 0, "classic": 2, "unique": 0, "intellectual": 3, "warm": 0 } },
+        { "label": "推しを見つけて応援したい", "scores": { "energy": 1, "classic": 0, "unique": 1, "intellectual": 0, "warm": 3 } },
+        { "label": "知らない芸人との出会いを楽しみたい", "scores": { "energy": 1, "classic": 0, "unique": 3, "intellectual": 1, "warm": 1 } }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "休日の過ごし方は？",
+      "options": [
+        { "label": "アウトドアでアクティブに", "scores": { "energy": 3, "classic": 0, "unique": 1, "intellectual": 0, "warm": 0 } },
+        { "label": "家でゴロゴロ動画鑑賞", "scores": { "energy": 0, "classic": 0, "unique": 2, "intellectual": 1, "warm": 2 } },
+        { "label": "本屋巡りや美術館", "scores": { "energy": 0, "classic": 1, "unique": 1, "intellectual": 3, "warm": 0 } },
+        { "label": "友達や家族とワイワイ", "scores": { "energy": 2, "classic": 1, "unique": 0, "intellectual": 0, "warm": 3 } }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "好きな食べ物のタイプは？",
+      "options": [
+        { "label": "激辛料理！刺激が欲しい", "scores": { "energy": 3, "classic": 0, "unique": 1, "intellectual": 0, "warm": 0 } },
+        { "label": "おばあちゃんの手料理みたいな和食", "scores": { "energy": 0, "classic": 3, "unique": 0, "intellectual": 0, "warm": 2 } },
+        { "label": "見たことない多国籍料理に挑戦", "scores": { "energy": 1, "classic": 0, "unique": 3, "intellectual": 1, "warm": 0 } },
+        { "label": "みんなで囲む鍋やBBQ", "scores": { "energy": 2, "classic": 0, "unique": 0, "intellectual": 0, "warm": 3 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "type": "energy",
+      "label": "ハイテンション爆笑タイプ",
+      "description": "あなたは笑いのエネルギーを全身で受け止めるタイプ！ライブ会場の空気ごと持っていく芸人と相性バツグン。盛り上がりMAXのネタに大爆笑間違いなし！",
+      "comedians": ["fullfull", "batterys", "paripinz", "dynamite", "flashmob"]
+    },
+    {
+      "type": "classic",
+      "label": "正統派しゃべくり漫才タイプ",
+      "description": "あなたは漫才の王道を愛するタイプ！テンポの良い掛け合い、キレのあるツッコミ、練り上げられた構成に痺れるはず。正統派の実力者たちと相性ピッタリ。",
+      "comedians": ["tenten", "ginshari", "span", "tent", "daihinmin"]
+    },
+    {
+      "type": "unique",
+      "label": "独自路線・クセ強タイプ",
+      "description": "あなたは予測不能な笑いを求めるタイプ！他にはない独自の世界観やぶっ飛んだ発想の芸人に惹かれるはず。ハマったら抜け出せない中毒性のある笑いをどうぞ。",
+      "comedians": ["taiga", "maruhon", "warainu", "nekoze", "engawa"]
+    },
+    {
+      "type": "intellectual",
+      "label": "知的・構成力重視タイプ",
+      "description": "あなたはネタの裏側まで楽しめるタイプ！緻密に計算された構成、知的なワードセンス、意外性のあるオチに心を掴まれるはず。噛めば噛むほど味が出る芸人たちと好相性。",
+      "comedians": ["kaibeatsch", "drass", "tachinbo", "musicair", "reiwa-roman"]
+    },
+    {
+      "type": "warm",
+      "label": "ほっこり共感タイプ",
+      "description": "あなたは温かい笑いに心が動くタイプ！日常の「あるある」や人柄が滲み出るような漫才に共感して笑うはず。観た後にホッとする、そんな芸人たちと相性バッチリ。",
+      "comedians": ["danchizuma", "kaimono", "tsunagari", "misokatsu", "wabisabi"]
+    }
+  ]
+}

@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
               <li><a href="/events" className="hover:text-yoshimoto-red transition-colors">公演情報</a></li>
               <li><a href="/comedians" className="hover:text-yoshimoto-red transition-colors">芸人一覧</a></li>
               <li><a href="/theaters" className="hover:text-yoshimoto-red transition-colors">劇場案内</a></li>
+              <li><a href="/compatibility" className="hover:text-yoshimoto-red transition-colors text-yoshimoto-gold">相性診断</a></li>
             </ul>
           </nav>
         </header>

@@ -60,7 +60,24 @@ export default function Home() {
           <a href="/comedians" className="border border-white/50 hover:bg-white hover:text-gray-900 text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
             芸人一覧
           </a>
+          <a href="/compatibility" className="bg-yoshimoto-gold hover:bg-yellow-600 text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
+            芸人相性診断
+          </a>
         </div>
+      </section>
+
+      {/* 芸人相性チェック バナー */}
+      <section className="mb-10">
+        <a href="/compatibility" className="block bg-gradient-to-r from-yoshimoto-gold/10 via-yellow-50 to-yoshimoto-gold/10 border-2 border-yoshimoto-gold/30 hover:border-yoshimoto-gold rounded-xl p-6 transition-all group">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-yoshimoto-gold font-bold text-sm mb-1">NEW CONTENT</p>
+              <h3 className="text-xl font-bold mb-1">芸人相性チェック</h3>
+              <p className="text-sm text-gray-500">7つの質問に答えるだけ！あなたと相性バツグンの芸人が見つかる</p>
+            </div>
+            <span className="text-4xl group-hover:scale-110 transition-transform">🎯</span>
+          </div>
+        </a>
       </section>
 
       {/* 超若手ピックアップ */}
