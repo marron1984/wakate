@@ -36,6 +36,7 @@ export default function MobileNav() {
                 { href: '/comedians', label: '芸人一覧' },
                 { href: '/nsc', label: 'NSC期別' },
                 { href: '/theaters', label: '劇場案内' },
+                { href: '/bmti', label: 'BMTI診断', accent: true },
                 { href: '/compatibility', label: '相性診断', accent: true },
               ].map((item, i) => (
                 <a

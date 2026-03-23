@@ -1,0 +1,204 @@
+{
+  "axes": [
+    { "id": "B", "name": "笑いの受け方", "left": { "code": "B", "label": "ボケ寄り" }, "right": { "code": "T", "label": "ツッコミ寄り" } },
+    { "id": "M", "name": "漫才の好み", "left": { "code": "M", "label": "しゃべくり派" }, "right": { "code": "K", "label": "コント・変化球派" } },
+    { "id": "T", "name": "テンション", "left": { "code": "A", "label": "アゲアゲ派" }, "right": { "code": "S", "label": "じっくり派" } },
+    { "id": "I", "name": "笑いの処理", "left": { "code": "N", "label": "直感・ノリ型" }, "right": { "code": "R", "label": "分析・理論型" } }
+  ],
+  "questions": [
+    {
+      "axis": "B",
+      "question": "友達の話を聞いてるとき、あなたは？",
+      "options": [
+        { "label": "「それでそれで？」とノッて広げる", "dir": "left", "weight": 2 },
+        { "label": "「いやそれおかしいやろ」と冷静にツッコむ", "dir": "right", "weight": 2 },
+        { "label": "一緒にボケて話を脱線させる", "dir": "left", "weight": 3 },
+        { "label": "的確な一言でオチをつける", "dir": "right", "weight": 3 }
+      ]
+    },
+    {
+      "axis": "B",
+      "question": "グループで一番ウケた場面、あなたの役割は？",
+      "options": [
+        { "label": "変なことを言い出してみんなを笑わせた", "dir": "left", "weight": 3 },
+        { "label": "誰かのボケに絶妙な返しをした", "dir": "right", "weight": 3 },
+        { "label": "空気を読んでボケにのっかった", "dir": "left", "weight": 2 },
+        { "label": "冷静に突っ込んだら爆笑になった", "dir": "right", "weight": 2 }
+      ]
+    },
+    {
+      "axis": "M",
+      "question": "お笑いライブのチラシ、どれに惹かれる？",
+      "options": [
+        { "label": "「正統派しゃべくり漫才の真剣勝負」", "dir": "left", "weight": 3 },
+        { "label": "「何が起こるかわからない企画ライブ」", "dir": "right", "weight": 3 },
+        { "label": "「実力派のネタバトル頂上決戦」", "dir": "left", "weight": 2 },
+        { "label": "「コント・漫才・フリートーク全部入り」", "dir": "right", "weight": 2 }
+      ]
+    },
+    {
+      "axis": "M",
+      "question": "「うわ、うまい！」と思う瞬間は？",
+      "options": [
+        { "label": "ボケとツッコミの掛け合いのテンポが完璧なとき", "dir": "left", "weight": 3 },
+        { "label": "まったく予想してなかった展開が来たとき", "dir": "right", "weight": 3 },
+        { "label": "ワードセンスが光る一言が出たとき", "dir": "left", "weight": 2 },
+        { "label": "体全体を使った表現で世界観に引き込まれたとき", "dir": "right", "weight": 2 }
+      ]
+    },
+    {
+      "axis": "T",
+      "question": "ライブ中の自分はどっち寄り？",
+      "options": [
+        { "label": "声を出して笑う！手を叩いて爆笑", "dir": "left", "weight": 3 },
+        { "label": "ニヤニヤ…じわじわ来るのが好き", "dir": "right", "weight": 3 },
+        { "label": "「ヤバイヤバイ」と前のめりになる", "dir": "left", "weight": 2 },
+        { "label": "終わってから「あれ良かったな」と思い返す", "dir": "right", "weight": 2 }
+      ]
+    },
+    {
+      "axis": "T",
+      "question": "お笑い動画を観るなら？",
+      "options": [
+        { "label": "テンション高め！勢いのあるネタ", "dir": "left", "weight": 3 },
+        { "label": "静かに始まって徐々に面白くなるネタ", "dir": "right", "weight": 3 },
+        { "label": "観客がめっちゃ盛り上がってるライブ映像", "dir": "left", "weight": 2 },
+        { "label": "劇場の空気感が伝わる落ち着いたネタ映像", "dir": "right", "weight": 2 }
+      ]
+    },
+    {
+      "axis": "I",
+      "question": "ネタが終わった後、まず思うことは？",
+      "options": [
+        { "label": "「おもろかった！」（感覚で即判断）", "dir": "left", "weight": 3 },
+        { "label": "「あのフリがここで回収されたのか…」（構成を振り返る）", "dir": "right", "weight": 3 },
+        { "label": "「なんか好き！」（理由はうまく言えない）", "dir": "left", "weight": 2 },
+        { "label": "「あのツッコミのワード選びが絶妙だった」", "dir": "right", "weight": 2 }
+      ]
+    },
+    {
+      "axis": "I",
+      "question": "推し芸人の魅力を人に説明するとき？",
+      "options": [
+        { "label": "「とにかく観て！観たらわかるから！」", "dir": "left", "weight": 3 },
+        { "label": "「ここがすごくて、ここの伏線がこう回収されて…」", "dir": "right", "weight": 3 },
+        { "label": "「空気感がヤバい、好きか嫌いかで言ったら好き！」", "dir": "left", "weight": 2 },
+        { "label": "「M-1の審査員コメントで○○って言われてたんだけど…」", "dir": "right", "weight": 2 }
+      ]
+    }
+  ],
+  "types": {
+    "BMAN": {
+      "name": "天然爆裂ボケ職人",
+      "tagline": "直感でボケ倒すハイテンション系",
+      "description": "場の空気を一瞬で変えるムードメーカー。理屈より勢い、計算よりセンスで笑いを取る天才肌。漫才劇場のフロアを最も沸かせる存在。",
+      "comedians": ["fullfull", "paripinz", "dynamite"],
+      "color": "accent"
+    },
+    "BMAR": {
+      "name": "計算型キャラボケ師",
+      "tagline": "緻密に設計されたボケを繰り出す策略家",
+      "description": "一見天然に見えて実は計算されたボケを繰り出す知性派。しゃべくり漫才の中でキャラクターを活かしたボケが光る。観る人が観ればその技術力に唸る。",
+      "comedians": ["batterys", "reiwa-roman", "danchizuma"],
+      "color": "gold"
+    },
+    "BMSN": {
+      "name": "静かなる天然ボケ",
+      "tagline": "独特の間で笑いを生むスロースターター",
+      "description": "テンション低めなのにいつの間にか笑ってる。独特の間や佇まいから漂う天然感が武器。静かに始まって気づけば場を支配している不思議な存在。",
+      "comedians": ["engawa", "nekoze", "tsunagari"],
+      "color": "mint"
+    },
+    "BMSR": {
+      "name": "哲学系ボケ師",
+      "tagline": "考え抜かれたワードで笑いを紡ぐ",
+      "description": "言葉選びにこだわり、一つ一つのボケに意味を込めるタイプ。噛めば噛むほど味が出る知的なボケで、お笑い通をうならせる。",
+      "comedians": ["warainu", "drass", "spicecurry"],
+      "color": "purple"
+    },
+    "BKAN": {
+      "name": "カオス系自由ボケ師",
+      "tagline": "予測不能な展開で場を壊す愛されキャラ",
+      "description": "コント的な動きやキャラ変化を駆使して予測不能な笑いを生む。ルールに縛られない自由さがクセになる。好き嫌いは分かれるが、ハマると抜け出せない。",
+      "comedians": ["maruhon", "flashmob", "dynamite"],
+      "color": "accent"
+    },
+    "BKAR": {
+      "name": "演技派ボケアーティスト",
+      "tagline": "世界観を作り込むクリエイター気質",
+      "description": "コントのような世界観を漫才に持ち込み、独自の空間を作り上げる芸術家タイプ。構成力と演技力の高さで見る者を自分の世界に引きずり込む。",
+      "comedians": ["maruhon", "nekoze", "warainu"],
+      "color": "purple"
+    },
+    "BKSN": {
+      "name": "ゆるふわ変化球ボケ師",
+      "tagline": "マイペースで独自路線を突き進む",
+      "description": "脱力系の空気から繰り出す変化球ボケが唯一無二。ゆるい雰囲気なのに気づけばツボにハマっている。ジャンルに縛られない自由さが魅力。",
+      "comedians": ["engawa", "tsunagari", "misokatsu"],
+      "color": "mint"
+    },
+    "BKSR": {
+      "name": "実験系ボケ研究者",
+      "tagline": "新しい笑いの形を模索する開拓者",
+      "description": "既存の型にハマらない新しいボケの形を追求する研究者タイプ。分析的な思考で笑いの可能性を広げる。漫才劇場の未来を感じさせる存在。",
+      "comedians": ["drass", "spicecurry", "musicair"],
+      "color": "blue"
+    },
+    "TMAN": {
+      "name": "熱血キレキレツッコミ",
+      "tagline": "テンポとパワーで場を引き締める",
+      "description": "ボケを見逃さない反射神経と声量で場をコントロール。ハイテンションなツッコミで客席を巻き込み、笑いの波を作る。ライブで最も頼れる存在。",
+      "comedians": ["batterys", "span", "taikou"],
+      "color": "accent"
+    },
+    "TMAR": {
+      "name": "正統派技巧ツッコミ",
+      "tagline": "ワード選びと間で笑いを倍増させる",
+      "description": "しゃべくり漫才のツッコミの教科書。テンポ・間・ワード全てが計算され尽くした職人芸。ボケを何倍にも面白くする増幅装置のような存在。",
+      "comedians": ["ginshari", "tenten", "kaibeatsch"],
+      "color": "gold"
+    },
+    "TMSN": {
+      "name": "ゆるツッコミ癒し系",
+      "tagline": "力を抜いたツッコミで独特の空気を作る",
+      "description": "怒鳴らない、叩かない、でもしっかり面白い。脱力系のツッコミで温かい空気を作り、お客さんをリラックスさせる。心地よい笑いの空間を生む天才。",
+      "comedians": ["kaimono", "wabisabi", "tsunagari"],
+      "color": "mint"
+    },
+    "TMSR": {
+      "name": "知的スナイパーツッコミ",
+      "tagline": "一撃で仕留めるワードセンスの持ち主",
+      "description": "静かに構えて、最高の一言で仕留める狙撃手。少ない手数で的確にボケを処理する知性が光る。その切れ味に思わず「うまい！」と唸ってしまう。",
+      "comedians": ["kaibeatsch", "tachinbo", "reiwa-roman"],
+      "color": "blue"
+    },
+    "TKAN": {
+      "name": "体当たりリアクション系",
+      "tagline": "全身でツッコむエンターテイナー",
+      "description": "言葉だけじゃなく体全体でツッコむパフォーマー。コント的な動きを取り入れたリアクションで笑いを増幅。見ているだけで楽しいエンタメ型。",
+      "comedians": ["chouhatsu", "fullfull", "flashmob"],
+      "color": "accent"
+    },
+    "TKAR": {
+      "name": "冷静沈着ツッコミ指揮者",
+      "tagline": "ネタ全体を俯瞰してコントロールする司令塔",
+      "description": "コントでも漫才でも常に全体を見渡し、最適なタイミングでツッコむ指揮者タイプ。分析力の高さで相方の良さを最大限に引き出す名プロデューサー。",
+      "comedians": ["daihinmin", "tachinbo", "blindside"],
+      "color": "blue"
+    },
+    "TKSN": {
+      "name": "あったかツッコミおかん",
+      "tagline": "包容力のある優しいツッコミ",
+      "description": "ボケを否定せず受け入れつつツッコむ、包容力抜群のタイプ。その温かさがコンビの空気を良くし、観ている側も幸せになれる。漫才劇場の癒し枠。",
+      "comedians": ["kaimono", "misokatsu", "salaryman"],
+      "color": "mint"
+    },
+    "TKSR": {
+      "name": "冷徹分析ツッコミマシーン",
+      "tagline": "無駄のない論理的ツッコミで笑いを量産",
+      "description": "感情を排した冷静なツッコミが逆に面白い。論理的に矛盾を指摘する淡々としたスタイルが知性を感じさせる。お笑い玄人が唸るツッコミ巧者。",
+      "comedians": ["tachinbo", "musicair", "goldrush"],
+      "color": "blue"
+    }
+  }
+}
