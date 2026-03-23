@@ -59,12 +59,12 @@ export default function Home() {
                 const comedian = news.comedianId ? comediansData.find(c => c.id === news.comedianId) : null
                 const matchedEvent = news.event ? eventsData.find(e => e.date === news.event.date && e.startTime === news.event.time) : null
                 return (
-                  <article key={news.id} className={`list-item px-2 animate-fade-in delay-${Math.min(i + 1, 8)}`}>
+                  <a key={news.id} href={`/news/${news.id}`} className={`list-item px-2 block group animate-fade-in delay-${Math.min(i + 1, 8)}`}>
                     <div className="flex items-center gap-2 mb-1">
                       <time className="text-[10px] t-muted shrink-0 w-[70px]">{news.date}</time>
                       <span className={`badge ${getCategoryStyle(news.category)}`}>{news.category}</span>
                     </div>
-                    <h3 className="text-sm font-bold leading-snug mb-0.5">{news.title}</h3>
+                    <h3 className="text-sm font-bold leading-snug mb-0.5 group-hover:t-accent transition-colors">{news.title}</h3>
                     <p className="text-[11px] t-muted leading-relaxed line-clamp-1">{news.summary}</p>
                     {news.event && (
                       <div className="mt-1.5 flex flex-wrap items-center gap-1">
@@ -72,13 +72,13 @@ export default function Home() {
                         <span className="tag">¥{news.event.price.toLocaleString()}</span>
                         <span className="tag">{news.event.theater}</span>
                         {news.event.status === '販売中' && matchedEvent?.ticketUrl && (
-                          <a href={matchedEvent.ticketUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] t-accent font-bold hover:underline ml-1">チケット購入 →</a>
+                          <span className="text-[10px] t-accent font-bold ml-1">チケット購入 →</span>
                         )}
                         {news.event.status === '近日発売' && <span className="tag">近日発売</span>}
                       </div>
                     )}
-                    {comedian && <a href={`/comedians/${comedian.id}`} className="text-[11px] t-sub hover:underline">{comedian.name}</a>}
-                  </article>
+                    {comedian && <span className="text-[11px] t-sub">{comedian.name}</span>}
+                  </a>
                 )
               })}
             </div>
