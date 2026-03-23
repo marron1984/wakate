@@ -1,0 +1,92 @@
+{
+  "sources": [
+    {
+      "id": "natalie-owarai",
+      "name": "お笑いナタリー",
+      "url": "https://natalie.mu/owarai/news/",
+      "type": "html",
+      "selector": "article a",
+      "enabled": true
+    },
+    {
+      "id": "yoshimoto-schedule",
+      "name": "よしもと漫才劇場 公式スケジュール",
+      "url": "https://schedule.yoshimoto.co.jp/",
+      "type": "html",
+      "selector": ".schedule-item",
+      "enabled": true
+    },
+    {
+      "id": "oricon-owarai",
+      "name": "ORICON NEWS お笑い",
+      "url": "https://www.oricon.co.jp/news/tag/id/owarai/",
+      "type": "html",
+      "selector": "article a",
+      "enabled": true
+    },
+    {
+      "id": "yahoo-owarai",
+      "name": "Yahoo!ニュース お笑い",
+      "url": "https://news.yahoo.co.jp/search?p=%E3%82%88%E3%81%97%E3%82%82%E3%81%A8+%E6%BC%AB%E6%89%8D%E5%8A%87%E5%A0%B4&ei=UTF-8",
+      "type": "html",
+      "selector": "article a",
+      "enabled": true
+    },
+    {
+      "id": "sponichi-geinou",
+      "name": "スポニチ お笑い",
+      "url": "https://www.sponichi.co.jp/entertainment/news/owarai/",
+      "type": "html",
+      "selector": "article a",
+      "enabled": true
+    },
+    {
+      "id": "hochi-geinou",
+      "name": "スポーツ報知 お笑い",
+      "url": "https://hochi.news/genre/entertainment/",
+      "type": "html",
+      "selector": "article a",
+      "enabled": true
+    }
+  ],
+  "keywords": {
+    "primary": [
+      "漫才劇場",
+      "よしもと漫才劇場",
+      "森ノ宮よしもと",
+      "M-1グランプリ",
+      "ABCお笑いグランプリ",
+      "キングオブコント",
+      "R-1グランプリ",
+      "THE W",
+      "ytv漫才新人賞"
+    ],
+    "comedians": [
+      "令和ロマン", "バッテリィズ", "銀シャリ", "テンダラー", "スーパーマラドーナ",
+      "カベポスター", "ロングコートダディ", "ヘンダーソン", "ダンビラムーチョ",
+      "ダイタク", "ドレス", "ニッポンの社長", "フースーヤ", "ドーナツ・ピーナツ",
+      "タチマチ", "ミュージックエア", "ワビサビ", "カイモノ", "タイムキーパー",
+      "テント", "パリピンズ", "ミソカツ", "ブラインドサイド", "フラッシュモブ",
+      "ネコゼ", "ゲンテン", "ゴールドラッシュ", "サラリーマンズ", "つながり",
+      "ダイナマイトキッズ", "エンガワ"
+    ],
+    "general": [
+      "若手芸人", "NSC", "吉本興業", "よしもと", "お笑い賞レース",
+      "ネタバトル", "単独ライブ"
+    ]
+  },
+  "categories": {
+    "公演情報": ["公演", "ライブ", "チケット", "出演", "開催", "スケジュール"],
+    "メディア": ["テレビ", "番組", "出演決定", "冠番組", "ラジオ", "配信", "YouTube"],
+    "受賞": ["優勝", "受賞", "グランプリ", "決勝", "準決勝", "チャンピオン"],
+    "イベント": ["イベント", "フェス", "祭", "コラボ", "特別公演", "感謝祭"],
+    "注目若手": ["NSC", "ルーキー", "若手", "新人", "デビュー", "昇格"]
+  },
+  "crawl": {
+    "intervalMinutes": 60,
+    "maxArticlesPerSource": 20,
+    "maxTotalArticles": 200,
+    "dedupeWindowDays": 30,
+    "userAgent": "WAKATE-News-Bot/1.0 (fan-site; +https://github.com/marron1984/wakate)"
+  }
+}

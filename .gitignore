@@ -4,3 +4,7 @@ out/
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
+
+# クローラー一時ファイル
+scripts/crawl.log
+scripts/.seen-urls.json
