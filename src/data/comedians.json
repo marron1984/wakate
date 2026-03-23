@@ -1,0 +1,78 @@
+[
+  {
+    "id": "reiwa-rozan",
+    "name": "令和ロマン",
+    "members": ["髙比良くるま", "松井ケムリ"],
+    "formation": 2017,
+    "agency": "吉本興業",
+    "category": "漫才",
+    "achievements": ["M-1グランプリ2023 優勝", "M-1グランプリ2024 優勝（史上初の連覇）"],
+    "description": "慶應義塾大学出身のインテリ漫才コンビ。くるまの独特なボケとケムリの的確なツッコミで人気急上昇。M-1史上初の連覇を達成。",
+    "homeTheater": "ルミネtheよしもと",
+    "sns": {
+      "youtube": "令和ロマン公式チャンネル"
+    }
+  },
+  {
+    "id": "shadoten",
+    "name": "シャッフルアイランド",
+    "members": ["ゴンちゃん", "タクミ"],
+    "formation": 2019,
+    "agency": "吉本興業",
+    "category": "漫才",
+    "achievements": ["ABCお笑いグランプリ2024 決勝進出"],
+    "description": "大阪を拠点に活動する若手漫才コンビ。独創的なネタで注目を集めている。",
+    "homeTheater": "よしもと漫才劇場",
+    "sns": {}
+  },
+  {
+    "id": "kayano-hinano",
+    "name": "カゲヤマ",
+    "members": ["カゲヤマ"],
+    "formation": 2020,
+    "agency": "吉本興業",
+    "category": "ピン芸人",
+    "achievements": ["R-1グランプリ2025 決勝進出"],
+    "description": "独特の世界観を持つピン芸人。シュールなネタで若い世代を中心に人気。",
+    "homeTheater": "よしもと∞ホール",
+    "sns": {}
+  },
+  {
+    "id": "daihinmin",
+    "name": "ダイヒンミン",
+    "members": ["ダイちゃん", "ヒンちゃん"],
+    "formation": 2018,
+    "agency": "吉本興業",
+    "category": "漫才",
+    "achievements": ["M-1グランプリ2024 準決勝進出"],
+    "description": "パワフルな漫才スタイルで知られるコンビ。劇場での人気が高い。",
+    "homeTheater": "よしもと漫才劇場",
+    "sns": {}
+  },
+  {
+    "id": "veranda",
+    "name": "バッテリィズ",
+    "members": ["エース", "寺家"],
+    "formation": 2017,
+    "agency": "吉本興業",
+    "category": "漫才",
+    "achievements": ["M-1グランプリ2024 決勝進出", "ABCお笑いグランプリ2023 優勝"],
+    "description": "大阪発の実力派漫才コンビ。エースの天然キャラとツッコミのテンポの良さが魅力。",
+    "homeTheater": "よしもと漫才劇場",
+    "sns": {
+      "youtube": "バッテリィズ公式"
+    }
+  },
+  {
+    "id": "tony-fresh",
+    "name": "トニーフレッシュ",
+    "members": ["トニー", "フレッシュ"],
+    "formation": 2021,
+    "agency": "吉本興業",
+    "category": "漫才",
+    "achievements": ["よしもと漫才劇場大賞2024 新人賞"],
+    "description": "結成間もないが勢いのある若手コンビ。フレッシュな感性のネタが評判。",
+    "homeTheater": "よしもと漫才劇場",
+    "sns": {}
+  }
+]

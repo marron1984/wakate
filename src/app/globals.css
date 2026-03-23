@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-6;
+  }
+  .badge {
+    @apply inline-block px-3 py-1 text-sm font-semibold rounded-full;
+  }
+  .badge-red {
+    @apply badge bg-yoshimoto-red text-white;
+  }
+  .badge-gold {
+    @apply badge bg-yoshimoto-gold text-white;
+  }
+  .badge-gray {
+    @apply badge bg-gray-200 text-gray-700;
+  }
+}
