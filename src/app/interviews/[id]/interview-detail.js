@@ -7,17 +7,6 @@ function formatDate(dateStr) {
   return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`
 }
 
-function getRankStyle(rank) {
-  switch (rank) {
-    case 'S': return 'bg-gold-soft t-gold'
-    case 'A': return 'bg-accent-soft t-accent'
-    case 'B': return 'bg-purple-500/10 text-purple-400'
-    case 'C': return 'bg-blue-500/10 text-blue-400'
-    case 'D': return 'bg-mint-soft t-mint'
-    default: return 'tag'
-  }
-}
-
 function getSpeakerStyle(speaker) {
   if (speaker === '——') return 't-muted font-bold'
   return 'font-black'
@@ -38,9 +27,7 @@ export default function InterviewDetail({ interview, comedian, otherInterviews }
               <a href={`/comedians/${comedian.id}`} className="tag text-[10px] hover:bg-accent-soft hover:t-accent transition-colors">
                 {comedian.name}
               </a>
-              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${getRankStyle(comedian.rank)}`}>
-                {comedian.rank}ランク
-              </span>
+              <span className="tag text-[10px]">{comedian.nscYear}</span>
             </>
           )}
         </div>
@@ -88,11 +75,9 @@ export default function InterviewDetail({ interview, comedian, otherInterviews }
           <a href={`/comedians/${comedian.id}`} className="card block p-5 hover:border-accent-soft transition-all group">
             <div className="flex items-center gap-3 mb-2">
               <h3 className="font-black text-base group-hover:t-accent transition-colors">{comedian.name}</h3>
-              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${getRankStyle(comedian.rank)}`}>
-                {comedian.rank}ランク
-              </span>
+              <span className="tag text-[10px]">{comedian.nscYear}</span>
             </div>
-            <p className="text-xs t-muted mb-1">{comedian.members.join('・')} ／ {comedian.nscYear} ／ 結成{comedian.formation}年</p>
+            <p className="text-xs t-muted mb-1">{comedian.members.join('・')} ／ 結成{comedian.formation}年 ／ {comedian.category}</p>
             <p className="text-sm t-secondary">{comedian.description}</p>
           </a>
         </div>

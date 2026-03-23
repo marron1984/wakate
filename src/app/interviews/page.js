@@ -12,17 +12,6 @@ function formatDate(dateStr) {
   return `${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()}`
 }
 
-function getRankStyle(rank) {
-  switch (rank) {
-    case 'S': return 'bg-gold-soft t-gold'
-    case 'A': return 'bg-accent-soft t-accent'
-    case 'B': return 'bg-purple-500/10 text-purple-400'
-    case 'C': return 'bg-blue-500/10 text-blue-400'
-    case 'D': return 'bg-mint-soft t-mint'
-    default: return 'tag'
-  }
-}
-
 export default function InterviewsListPage() {
   return (
     <div className="max-w-3xl mx-auto">
@@ -46,9 +35,7 @@ export default function InterviewsListPage() {
                   <div className="flex items-center gap-2 mb-2 flex-wrap">
                     <span className="text-[10px] t-muted">{formatDate(interview.date)}</span>
                     {comedian && (
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${getRankStyle(comedian.rank)}`}>
-                        {comedian.rank}ランク
-                      </span>
+                      <span className="tag text-[10px]">{comedian.nscYear}</span>
                     )}
                   </div>
                   <h2 className="font-black text-lg tracking-tight group-hover:t-accent transition-colors mb-1">

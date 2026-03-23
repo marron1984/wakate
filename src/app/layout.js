@@ -2,6 +2,7 @@ import './globals.css'
 import { ThemeProvider } from './theme-provider'
 import ThemeSwitcher from './theme-switcher'
 import MobileNav from './mobile-nav'
+import DesktopNav from './desktop-nav'
 
 export const metadata = {
   title: 'WAKATE — よしもと漫才劇場',
@@ -23,21 +24,7 @@ export default function RootLayout({ children }) {
               </a>
 
               {/* Desktop nav */}
-              <div className="hidden sm:flex items-center gap-1">
-                <a href="/" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">ホーム</a>
-                <a href="/events" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">公演情報</a>
-                <a href="/comedians" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">芸人一覧</a>
-                <a href="/nsc" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">NSC期別</a>
-                <a href="/calendar" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">カレンダー</a>
-                <a href="/theaters" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">劇場案内</a>
-                <a href="/glossary" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">用語辞典</a>
-                <a href="/interviews" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">インタビュー</a>
-                <a href="/bmti" className="bg-accent-soft t-accent hover:opacity-80 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all">BMTI</a>
-                <a href="/compatibility" className="bg-gold-soft t-gold hover:opacity-80 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all">相性診断</a>
-                <div className="ml-2">
-                  <ThemeSwitcher />
-                </div>
-              </div>
+              <DesktopNav />
 
               {/* Mobile nav */}
               <div className="flex sm:hidden items-center gap-2">
@@ -50,20 +37,32 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <footer style={{ borderTop: '1px solid rgb(var(--border))' }}>
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <p className="font-black text-sm tracking-tighter">WAKA<span className="t-accent">TE</span></p>
-                <p className="text-xs t-muted mt-1">※ ファンメイドサイトです。吉本興業公式ではありません。</p>
-              </div>
-              <div className="flex gap-6 text-xs t-muted">
-                <a href="/events" className="hover:t-accent transition-colors">公演情報</a>
-                <a href="/comedians" className="hover:t-accent transition-colors">芸人一覧</a>
-                <a href="/nsc" className="hover:t-accent transition-colors">NSC期別</a>
-                <a href="/calendar" className="hover:t-accent transition-colors">カレンダー</a>
-                <a href="/glossary" className="hover:t-accent transition-colors">用語辞典</a>
-                <a href="/interviews" className="hover:t-accent transition-colors">インタビュー</a>
-                <a href="/bmti" className="hover:t-accent transition-colors">BMTI</a>
-                <a href="/compatibility" className="hover:t-accent transition-colors">相性診断</a>
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+              <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
+                <div>
+                  <p className="font-black text-sm tracking-tighter mb-1">WAKA<span className="t-accent">TE</span></p>
+                  <p className="text-xs t-muted">※ ファンメイドサイトです。吉本興業公式ではありません。</p>
+                </div>
+                <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs t-muted">
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-bold uppercase tracking-wider t-accent">公演</p>
+                    <a href="/events" className="block hover:t-accent transition-colors">公演情報</a>
+                    <a href="/calendar" className="block hover:t-accent transition-colors">カレンダー</a>
+                    <a href="/theaters" className="block hover:t-accent transition-colors">劇場案内</a>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-bold uppercase tracking-wider t-accent">芸人</p>
+                    <a href="/comedians" className="block hover:t-accent transition-colors">芸人一覧</a>
+                    <a href="/nsc" className="block hover:t-accent transition-colors">NSC期別</a>
+                    <a href="/interviews" className="block hover:t-accent transition-colors">インタビュー</a>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-bold uppercase tracking-wider t-accent">コンテンツ</p>
+                    <a href="/glossary" className="block hover:t-accent transition-colors">用語辞典</a>
+                    <a href="/bmti" className="block hover:t-accent transition-colors">BMTI診断</a>
+                    <a href="/compatibility" className="block hover:t-accent transition-colors">相性診断</a>
+                  </div>
+                </div>
               </div>
             </div>
           </footer>

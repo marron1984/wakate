@@ -1,6 +1,7 @@
 import newsData from '../data/news.json'
 import eventsData from '../data/events.json'
 import comediansData from '../data/comedians.json'
+import interviewsData from '../data/interviews.json'
 
 function getCategoryStyle(cat) {
   switch (cat) {
@@ -80,6 +81,37 @@ export default function Home() {
               {c.achievements[0] && <p className="text-[11px] t-accent mt-2 line-clamp-1">{c.achievements[0]}</p>}
             </a>
           ))}
+        </div>
+      </section>
+
+      {/* Latest Interview */}
+      <section className="mb-14">
+        <div className="flex items-end justify-between mb-6">
+          <div className="animate-slide-in-left">
+            <p className="t-accent text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Interview</p>
+            <h2 className="section-title">最新インタビュー</h2>
+          </div>
+          <a href="/interviews" className="btn-ghost text-xs">All interviews →</a>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {interviewsData.slice(0, 3).map((interview, i) => {
+            const c = comediansData.find(x => x.id === interview.comedianId)
+            return (
+              <a
+                key={interview.id}
+                href={`/interviews/${interview.id}`}
+                className={`card block group animate-fade-in-up delay-${i + 1}`}
+                style={{ borderColor: 'transparent' }}
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  {c && <span className="tag text-[10px]">{c.name}</span>}
+                  <span className="text-[10px] t-muted">{interview.date}</span>
+                </div>
+                <h3 className="font-bold text-sm mb-1.5 group-hover:t-accent transition-colors leading-snug">{interview.title}</h3>
+                <p className="text-xs t-muted line-clamp-2">{interview.intro}</p>
+              </a>
+            )
+          })}
         </div>
       </section>
 
