@@ -3,10 +3,36 @@
 import { useState } from 'react'
 import { useTheme, THEMES } from './theme-provider'
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher({ variant = 'icon' }) {
   const { theme, setTheme } = useTheme()
   const [open, setOpen] = useState(false)
+  const current = THEMES.find(t => t.id === theme)
 
+  // Inline variant — grid of color dots (for mobile menu)
+  if (variant === 'inline') {
+    return (
+      <div className="flex items-center gap-2">
+        {THEMES.map((t) => (
+          <button
+            key={t.id}
+            onClick={() => setTheme(t.id)}
+            className={`w-9 h-9 rounded-xl flex items-center justify-center text-base transition-all duration-200 ${
+              theme === t.id ? 'ring-2 scale-110' : 'hover:scale-105'
+            }`}
+            style={{
+              backgroundColor: 'rgb(var(--text) / 0.05)',
+              ringColor: theme === t.id ? 'rgb(var(--accent))' : undefined,
+            }}
+            aria-label={t.label}
+          >
+            {t.icon}
+          </button>
+        ))}
+      </div>
+    )
+  }
+
+  // Icon variant — dropdown (for desktop)
   return (
     <div className="relative">
       <button
@@ -15,7 +41,7 @@ export default function ThemeSwitcher() {
         style={{ backgroundColor: 'rgb(var(--text) / 0.05)' }}
         aria-label="テーマを変更"
       >
-        <span className="text-sm">{THEMES.find(t => t.id === theme)?.icon || '🌑'}</span>
+        <span className="text-sm">{current?.icon || '🌑'}</span>
       </button>
 
       {open && (
@@ -33,9 +59,9 @@ export default function ThemeSwitcher() {
                 key={t.id}
                 onClick={() => { setTheme(t.id); setOpen(false) }}
                 className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm transition-all duration-150 ${
-                  theme === t.id ? 't-accent font-semibold' : 'btn-ghost'
+                  theme === t.id ? 't-accent font-semibold' : ''
                 }`}
-                style={theme !== t.id ? { color: 'rgb(var(--text-secondary))' } : {}}
+                style={{ color: theme !== t.id ? 'rgb(var(--text-secondary))' : undefined }}
                 onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'rgb(var(--text) / 0.05)' }}
                 onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
               >

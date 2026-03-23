@@ -1,6 +1,7 @@
 import './globals.css'
 import { ThemeProvider } from './theme-provider'
 import ThemeSwitcher from './theme-switcher'
+import MobileNav from './mobile-nav'
 
 export const metadata = {
   title: 'WAKATE — よしもと漫才劇場',
@@ -10,14 +11,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>
         <ThemeProvider>
           <header className="fixed top-0 w-full z-50 glass">
-            <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+            <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
               <a href="/" className="font-black text-lg tracking-tighter">
                 WAKA<span className="t-accent">TE</span>
               </a>
-              <div className="flex items-center gap-1">
+
+              {/* Desktop nav */}
+              <div className="hidden sm:flex items-center gap-1">
                 <a href="/" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">Home</a>
                 <a href="/events" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">Events</a>
                 <a href="/comedians" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">Comedians</a>
@@ -27,13 +33,19 @@ export default function RootLayout({ children }) {
                   <ThemeSwitcher />
                 </div>
               </div>
+
+              {/* Mobile nav */}
+              <div className="flex sm:hidden items-center gap-2">
+                <ThemeSwitcher />
+                <MobileNav />
+              </div>
             </nav>
           </header>
-          <main className="max-w-6xl mx-auto px-6 pt-24 pb-16 min-h-screen">
+          <main className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-16 min-h-screen">
             {children}
           </main>
           <footer style={{ borderTop: '1px solid rgb(var(--border))' }}>
-            <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <p className="font-black text-sm tracking-tighter">WAKA<span className="t-accent">TE</span></p>
                 <p className="text-xs t-muted mt-1">Fan-made site. Not affiliated with Yoshimoto Kogyo.</p>
