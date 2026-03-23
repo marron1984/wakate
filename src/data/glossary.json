@@ -1,0 +1,210 @@
+[
+  {
+    "id": "manzai",
+    "term": "漫才",
+    "reading": "まんざい",
+    "category": "基本",
+    "description": "2人（またはそれ以上）の掛け合いで笑いを生む話芸。ボケとツッコミの役割分担が基本。よしもと漫才劇場の看板ジャンル。",
+    "related": ["boke", "tsukkomi", "shaberi"]
+  },
+  {
+    "id": "boke",
+    "term": "ボケ",
+    "reading": "ぼけ",
+    "category": "基本",
+    "description": "わざと間違ったことやおかしなことを言って笑いを誘う役割。漫才の「攻め」のポジション。天然ボケ・計算ボケ・キャラボケなど様々な種類がある。",
+    "related": ["tsukkomi", "tendon", "noritsukomi"]
+  },
+  {
+    "id": "tsukkomi",
+    "term": "ツッコミ",
+    "reading": "つっこみ",
+    "category": "基本",
+    "description": "ボケの発言や行動に対して「おかしいやろ！」と指摘する役割。漫才の「守り」であり「ハンドル」。ワードセンスや間が笑いの質を大きく左右する。",
+    "related": ["boke", "noritsukkomi", "dontsuki"]
+  },
+  {
+    "id": "neta",
+    "term": "ネタ",
+    "reading": "ねた",
+    "category": "基本",
+    "description": "芸人が披露する演目・持ちネタのこと。漫才、コント、ピン芸など形式は問わない。「ネタを作る」「ネタを下ろす（初披露する）」のように使う。",
+    "related": ["shinneta", "netaoroshi"]
+  },
+  {
+    "id": "conte",
+    "term": "コント",
+    "reading": "こんと",
+    "category": "基本",
+    "description": "設定や役柄を演じて笑いを作る演劇的な芸。漫才と違い衣装や小道具を使うことも。漫才師がコントをやることも珍しくない。",
+    "related": ["manzai", "neta"]
+  },
+  {
+    "id": "furi",
+    "term": "フリ",
+    "reading": "ふり",
+    "category": "技術",
+    "description": "ボケやオチのための「前振り」。お客さんの予想を作ることで、裏切った時の笑いを大きくする。フリが丁寧なほどオチが決まる。ネタ作りの根幹技術。",
+    "related": ["ochi", "kaishu", "tendon"]
+  },
+  {
+    "id": "ochi",
+    "term": "オチ",
+    "reading": "おち",
+    "category": "技術",
+    "description": "ネタの締めくくり、最後のボケ。「オチがつく」＝話にまとまりがつくこと。フリからの落差が大きいほど笑いは大きくなる。",
+    "related": ["furi", "oogiri"]
+  },
+  {
+    "id": "tendon",
+    "term": "天丼",
+    "reading": "てんどん",
+    "category": "技術",
+    "description": "同じボケやフレーズを繰り返して笑いを重ねる技法。1回目より2回目、2回目より3回目のほうが笑いが大きくなるのが理想。お笑いの王道テクニック。",
+    "related": ["boke", "furi"]
+  },
+  {
+    "id": "kudari",
+    "term": "くだり",
+    "reading": "くだり",
+    "category": "技術",
+    "description": "ネタの中の一つのまとまった場面・パート。「あのくだり面白かった」のように使う。複数のくだりを組み合わせてネタ全体を構成する。",
+    "related": ["neta", "kousei"]
+  },
+  {
+    "id": "kousei",
+    "term": "構成",
+    "reading": "こうせい",
+    "category": "技術",
+    "description": "ネタ全体の組み立て方・流れ。導入→展開→オチの基本構造をベースに、伏線回収や天丼などを織り交ぜて笑いの総量を最大化する。実力者ほど構成が巧み。",
+    "related": ["furi", "ochi", "kaishu"]
+  },
+  {
+    "id": "kaishu",
+    "term": "伏線回収",
+    "reading": "ふくせんかいしゅう",
+    "category": "技術",
+    "description": "ネタの序盤で何気なく出した情報を、後半のオチに使って笑いにすること。「さっきの！」と気づいた瞬間の快感が客席を沸かせる。構成力の見せ所。",
+    "related": ["furi", "ochi", "kousei"]
+  },
+  {
+    "id": "noritsukkomi",
+    "term": "ノリツッコミ",
+    "reading": "のりつっこみ",
+    "category": "技術",
+    "description": "ボケに一度乗っかってから「って、おかしいやろ！」とツッコむ技法。ツッコミ側がボケの世界観に入ってから否定することで笑いが増幅する。",
+    "related": ["tsukkomi", "boke"]
+  },
+  {
+    "id": "dontsuki",
+    "term": "ドンツキ",
+    "reading": "どんつき",
+    "category": "技術",
+    "description": "ツッコミの際に相方を軽く叩いたり押したりする身体的なアクション。テレビ以降は「叩かないツッコミ」も主流に。漫才劇場では賛否両論。",
+    "related": ["tsukkomi"]
+  },
+  {
+    "id": "shaberi",
+    "term": "しゃべくり漫才",
+    "reading": "しゃべくりまんざい",
+    "category": "スタイル",
+    "description": "小道具や動きを使わず、会話の掛け合いだけで笑わせる漫才の王道スタイル。テンポ・ワードセンス・間が命。銀シャリ、テンダラーなどが代表格。",
+    "related": ["manzai", "conte"]
+  },
+  {
+    "id": "system-manzai",
+    "term": "システム漫才",
+    "reading": "しすてむまんざい",
+    "category": "スタイル",
+    "description": "「○○するとこうなる」のような一定のルール（システム）に沿ってボケを繰り返すスタイル。パターンが確立されるとお客さんが先読みして笑いが倍増する。",
+    "related": ["manzai", "tendon"]
+  },
+  {
+    "id": "tsukamami",
+    "term": "つかみ",
+    "reading": "つかみ",
+    "category": "技術",
+    "description": "ネタの冒頭で客の心をつかむ部分。自己紹介ギャグや一言ボケなど。「つかみがうまい」と最初から客席を味方にできるため、特にバトルライブでは重要。",
+    "related": ["neta", "furi"]
+  },
+  {
+    "id": "oogiri",
+    "term": "大喜利",
+    "reading": "おおぎり",
+    "category": "形式",
+    "description": "お題に対して面白い答えを出すゲーム形式。即興力が試される。漫才劇場でもライブの企画コーナーで頻繁に実施。「IPPONグランプリ」で一般にも浸透。",
+    "related": ["neta"]
+  },
+  {
+    "id": "netaoroshi",
+    "term": "ネタおろし",
+    "reading": "ねたおろし",
+    "category": "文化",
+    "description": "新しいネタを初めて舞台で披露すること。漫才劇場は「ネタおろし」の場として重要。客の反応を見ながらネタを磨き上げていく。",
+    "related": ["neta", "shinneta"]
+  },
+  {
+    "id": "shinneta",
+    "term": "新ネタ",
+    "reading": "しんねた",
+    "category": "文化",
+    "description": "新しく作ったネタのこと。賞レース（M-1など）に向けて芸人は毎年新ネタを量産する。「新ネタお披露目ライブ」は漫才劇場の人気公演。",
+    "related": ["neta", "netaoroshi", "m1"]
+  },
+  {
+    "id": "m1",
+    "term": "M-1グランプリ",
+    "reading": "えむわんぐらんぷり",
+    "category": "賞レース",
+    "description": "結成15年以内のコンビによる日本最大の漫才賞レース。毎年12月に決勝が生放送。漫才劇場メンバーにとって最大の目標であり、ここでの活躍が人生を変える。",
+    "related": ["manzai", "shinneta"]
+  },
+  {
+    "id": "kamigata",
+    "term": "上方漫才",
+    "reading": "かみがたまんざい",
+    "category": "文化",
+    "description": "関西（上方）発祥の漫才の伝統。関東の漫才に比べてテンポが速く、ツッコミが激しいのが特徴。よしもと漫才劇場は上方漫才の本拠地。",
+    "related": ["manzai", "shaberi"]
+  },
+  {
+    "id": "maekara-3banme",
+    "term": "前から3番目",
+    "reading": "まえからさんばんめ",
+    "category": "文化",
+    "description": "出番順で3番目のこと。お笑いライブでは出番順が重要で、トリ（最後）が最も名誉。逆に「前3」は若手が修行する出番。漫才劇場では超若手の定位置。",
+    "related": ["tori"]
+  },
+  {
+    "id": "tori",
+    "term": "トリ",
+    "reading": "とり",
+    "category": "文化",
+    "description": "ライブの最後の出番。最も実力と人気がある芸人が務める。「トリを飾る」は芸人にとって大きな名誉。漫才劇場ではSランク・Aランク芸人が担当。",
+    "related": ["maekara-3banme"]
+  },
+  {
+    "id": "manzai-gekijo",
+    "term": "よしもと漫才劇場",
+    "reading": "よしもとまんざいげきじょう",
+    "category": "劇場",
+    "description": "大阪・なんばにある若手芸人の登竜門。2014年にオープン。ランク制度（S〜D）があり、実力に応じて出番や出演料が変わる。ここから多くのスターが誕生。",
+    "related": ["rank", "kamigata"]
+  },
+  {
+    "id": "rank",
+    "term": "ランク制度",
+    "reading": "らんくせいど",
+    "category": "劇場",
+    "description": "漫才劇場の芸人をS・A・B・C・Dに格付けする制度。半年ごとに見直され、観客投票・審査員評価で昇格/降格が決まる。Sランクは数組のみ。芸人にとって生活がかかった制度。",
+    "related": ["manzai-gekijo"]
+  },
+  {
+    "id": "nsc",
+    "term": "NSC",
+    "reading": "えぬえすしー",
+    "category": "文化",
+    "description": "New Star Creation（吉本総合芸能学院）の略。吉本興業の養成所で、ここからプロの世界に入る。「NSC○○期」は芸人の世代を表す重要な指標。同期の絆は深い。",
+    "related": ["manzai-gekijo"]
+  }
+]

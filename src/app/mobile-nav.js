@@ -35,7 +35,9 @@ export default function MobileNav() {
                 { href: '/events', label: '公演情報' },
                 { href: '/comedians', label: '芸人一覧' },
                 { href: '/nsc', label: 'NSC期別' },
+                { href: '/calendar', label: 'カレンダー' },
                 { href: '/theaters', label: '劇場案内' },
+                { href: '/glossary', label: '用語辞典' },
                 { href: '/bmti', label: 'BMTI診断', accent: true },
                 { href: '/compatibility', label: '相性診断', accent: true },
               ].map((item, i) => (
