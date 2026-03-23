@@ -34,6 +34,7 @@ export default function MobileNav() {
                 { href: '/', label: 'ホーム' },
                 { href: '/events', label: '公演情報' },
                 { href: '/comedians', label: '芸人一覧' },
+                { href: '/nsc', label: 'NSC期別' },
                 { href: '/theaters', label: '劇場案内' },
                 { href: '/compatibility', label: '相性診断', accent: true },
               ].map((item, i) => (

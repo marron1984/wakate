@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
                 <a href="/" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">ホーム</a>
                 <a href="/events" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">公演情報</a>
                 <a href="/comedians" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">芸人一覧</a>
+                <a href="/nsc" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">NSC期別</a>
                 <a href="/theaters" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">劇場案内</a>
                 <a href="/compatibility" className="bg-gold-soft t-gold hover:opacity-80 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all">相性診断</a>
                 <div className="ml-2">
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
               <div className="flex gap-6 text-xs t-muted">
                 <a href="/events" className="hover:t-accent transition-colors">公演情報</a>
                 <a href="/comedians" className="hover:t-accent transition-colors">芸人一覧</a>
+                <a href="/nsc" className="hover:t-accent transition-colors">NSC期別</a>
                 <a href="/compatibility" className="hover:t-accent transition-colors">相性診断</a>
               </div>
             </div>
