@@ -57,6 +57,7 @@ export default function Home() {
             <div>
               {newsData.slice(0, 10).map((news, i) => {
                 const comedian = news.comedianId ? comediansData.find(c => c.id === news.comedianId) : null
+                const matchedEvent = news.event ? eventsData.find(e => e.date === news.event.date && e.startTime === news.event.time) : null
                 return (
                   <article key={news.id} className={`list-item px-2 animate-fade-in delay-${Math.min(i + 1, 8)}`}>
                     <div className="flex items-center gap-2 mb-1">
@@ -66,11 +67,14 @@ export default function Home() {
                     <h3 className="text-sm font-bold leading-snug mb-0.5">{news.title}</h3>
                     <p className="text-[11px] t-muted leading-relaxed line-clamp-1">{news.summary}</p>
                     {news.event && (
-                      <div className="mt-1.5 flex flex-wrap gap-1">
+                      <div className="mt-1.5 flex flex-wrap items-center gap-1">
                         <span className="tag">{news.event.date} {news.event.time}〜</span>
                         <span className="tag">¥{news.event.price.toLocaleString()}</span>
                         <span className="tag">{news.event.theater}</span>
-                        {news.event.status === '販売中' && <span className="badge bg-accent-soft t-accent">販売中</span>}
+                        {news.event.status === '販売中' && matchedEvent?.ticketUrl && (
+                          <a href={matchedEvent.ticketUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] t-accent font-bold hover:underline ml-1">チケット購入 →</a>
+                        )}
+                        {news.event.status === '近日発売' && <span className="tag">近日発売</span>}
                       </div>
                     )}
                     {comedian && <a href={`/comedians/${comedian.id}`} className="text-[11px] t-sub hover:underline">{comedian.name}</a>}
@@ -145,14 +149,19 @@ export default function Home() {
             <h2 className="section-bar mb-3">直近の公演</h2>
             <div>
               {upcoming.map((ev) => (
-                <a key={ev.id} href="/events" className="list-item block px-1 group">
+                <div key={ev.id} className="list-item px-1">
                   <div className="flex items-center gap-1.5 mb-0.5">
                     <span className="tag">{ev.type}</span>
                     {ev.status === '販売中' && <span className="badge bg-accent-soft t-accent">販売中</span>}
                   </div>
-                  <p className="text-sm font-bold group-hover:t-accent transition-colors">{ev.title}</p>
-                  <p className="text-[10px] t-muted mt-0.5">{ev.date} {ev.startTime}〜 ¥{ev.price.toLocaleString()}</p>
-                </a>
+                  <a href="/events" className="text-sm font-bold hover:t-accent transition-colors">{ev.title}</a>
+                  <div className="flex items-center justify-between mt-0.5">
+                    <p className="text-[10px] t-muted">{ev.date} {ev.startTime}〜 ¥{ev.price.toLocaleString()}</p>
+                    {ev.ticketUrl && ev.status === '販売中' && (
+                      <a href={ev.ticketUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] t-accent font-bold hover:underline shrink-0">購入 →</a>
+                    )}
+                  </div>
+                </div>
               ))}
             </div>
             <a href="/events" className="btn-ghost mt-2 inline-block">すべての公演 →</a>
