@@ -39,7 +39,7 @@ export default function Home() {
         <div className="relative">
           <p className="t-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 animate-fade-in delay-1">Yoshimoto Manzai Gekijo</p>
           <h1 className="text-5xl sm:text-7xl font-black tracking-tighter mb-4 animate-fade-in-up delay-2">
-            WAKA<span className="t-accent">TE</span>
+            WAKATE<span className="t-accent">.</span><span className="t-gold">Fun</span>
           </h1>
           <p className="t-muted text-sm max-w-md mb-8 leading-relaxed animate-fade-in delay-3">
             よしもと漫才劇場の若手芸人にフォーカスした情報サイト。

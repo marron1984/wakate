@@ -5,7 +5,7 @@ import MobileNav from './mobile-nav'
 import DesktopNav from './desktop-nav'
 
 export const metadata = {
-  title: 'WAKATE — よしもと漫才劇場',
+  title: 'WAKATE.Fun — よしもと漫才劇場',
   description: 'よしもと漫才劇場の若手芸人・公演情報・イベント情報を発信するニュースサイト',
 }
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <header className="fixed top-0 w-full z-50 glass">
             <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
               <a href="/" className="font-black text-lg tracking-tighter">
-                WAKA<span className="t-accent">TE</span>
+                WAKATE<span className="t-accent">.</span><span className="t-gold">Fun</span>
               </a>
 
               {/* Desktop nav */}
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
               <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
                 <div>
-                  <p className="font-black text-sm tracking-tighter mb-1">WAKA<span className="t-accent">TE</span></p>
+                  <p className="font-black text-sm tracking-tighter mb-1">WAKATE<span className="t-accent">.</span><span className="t-gold">Fun</span></p>
                   <p className="text-xs t-muted">※ ファンメイドサイトです。吉本興業公式ではありません。</p>
                 </div>
                 <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs t-muted">

@@ -1,6 +1,6 @@
 import comediansData from '../../data/comedians.json'
 
-export const metadata = { title: '芸人一覧 — WAKATE' }
+export const metadata = { title: '芸人一覧 — WAKATE.Fun' }
 
 function getRankStyle(r) {
   switch (r) {

@@ -2,7 +2,7 @@ import theatersData from '../../data/theaters.json'
 import comediansData from '../../data/comedians.json'
 import eventsData from '../../data/events.json'
 
-export const metadata = { title: '劇場案内 — WAKATE' }
+export const metadata = { title: '劇場案内 — WAKATE.Fun' }
 
 export default function TheatersPage() {
   return (

@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const interview = interviewsData.find(a => a.id === params.id)
   return {
-    title: interview ? `${interview.title} | WAKATE` : 'インタビュー | WAKATE',
+    title: interview ? `${interview.title} | WAKATE.Fun` : 'インタビュー | WAKATE.Fun',
   }
 }
 

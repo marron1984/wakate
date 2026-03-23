@@ -2,7 +2,7 @@ import eventsData from '../../data/events.json'
 import comediansData from '../../data/comedians.json'
 import theatersData from '../../data/theaters.json'
 
-export const metadata = { title: '公演スケジュール — WAKATE' }
+export const metadata = { title: '公演スケジュール — WAKATE.Fun' }
 
 function getTypeStyle(type) {
   switch (type) {

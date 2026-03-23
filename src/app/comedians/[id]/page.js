@@ -8,7 +8,7 @@ export function generateStaticParams() {
 }
 export function generateMetadata({ params }) {
   const c = comediansData.find(c => c.id === params.id)
-  return { title: c ? `${c.name} — WAKATE` : 'WAKATE' }
+  return { title: c ? `${c.name} — WAKATE.Fun` : 'WAKATE.Fun' }
 }
 
 function getRankStyle(r) {
