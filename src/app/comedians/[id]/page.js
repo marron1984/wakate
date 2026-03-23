@@ -22,6 +22,7 @@ function getRankLabel(rank) {
     case 'A': return '看板'
     case 'B': return '中堅'
     case 'C': return '若手'
+    case 'D': return '超若手'
     default: return ''
   }
 }
@@ -32,6 +33,7 @@ function getRankColor(rank) {
     case 'A': return 'bg-yoshimoto-red text-white'
     case 'B': return 'bg-blue-500 text-white'
     case 'C': return 'bg-green-500 text-white'
+    case 'D': return 'bg-emerald-500 text-white'
     default: return 'bg-gray-300 text-gray-700'
   }
 }

@@ -8,6 +8,7 @@ function getCategoryColor(category) {
     case 'イベント': return 'bg-yoshimoto-gold text-white'
     case 'メディア': return 'bg-blue-500 text-white'
     case '受賞': return 'bg-purple-500 text-white'
+    case '注目若手': return 'bg-emerald-500 text-white'
     default: return 'bg-gray-200 text-gray-700'
   }
 }
@@ -27,7 +28,9 @@ export default function Home() {
   const upcomingEvents = eventsData
     .filter(e => e.date >= '2026-03-23')
     .sort((a, b) => a.date.localeCompare(b.date) || a.startTime.localeCompare(b.startTime))
-    .slice(0, 4)
+    .slice(0, 5)
+
+  const rookies = comediansData.filter(c => c.rank === 'D')
 
   return (
     <div>
@@ -47,6 +50,38 @@ export default function Home() {
           <a href="/comedians" className="border border-white/50 hover:bg-white hover:text-gray-900 text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
             芸人一覧
           </a>
+        </div>
+      </section>
+
+      {/* 超若手ピックアップ */}
+      <section className="mb-10">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold border-l-4 border-emerald-500 pl-3">
+            超若手ピックアップ
+            <span className="text-sm font-normal text-gray-400 ml-2">- Next Generation -</span>
+          </h2>
+          <a href="/comedians" className="text-sm text-yoshimoto-red hover:underline font-medium">全員見る →</a>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {rookies.map((comedian) => (
+            <a
+              key={comedian.id}
+              href={`/comedians/${comedian.id}`}
+              className="bg-gradient-to-b from-white to-gray-50 rounded-lg border-2 border-transparent hover:border-emerald-400 p-4 shadow-sm hover:shadow-md transition-all"
+            >
+              <div className="text-center mb-2">
+                <span className="text-3xl">{comedian.category === 'ピン芸人' ? '🎙️' : comedian.category.includes('コント') ? '🎬' : '🎤'}</span>
+              </div>
+              <h3 className="font-bold text-center text-sm mb-1">{comedian.name}</h3>
+              <p className="text-xs text-gray-500 text-center mb-2">{comedian.nscYear}</p>
+              <span className="block text-center">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-medium">D・超若手</span>
+              </span>
+              {comedian.achievements[0] && (
+                <p className="text-xs text-yoshimoto-red text-center mt-2 line-clamp-1">🏆 {comedian.achievements[0]}</p>
+              )}
+            </a>
+          ))}
         </div>
       </section>
 
@@ -83,8 +118,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* サイドバー: 直近の公演 */}
+        {/* サイドバー */}
         <aside>
+          {/* 直近の公演 */}
           <h2 className="text-2xl font-bold mb-6 border-l-4 border-yoshimoto-gold pl-3">直近の公演</h2>
           <div className="space-y-3">
             {upcomingEvents.map((event) => (

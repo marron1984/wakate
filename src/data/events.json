@@ -128,5 +128,83 @@
     "description": "森ノ宮で楽しむ平日夜のネタライブ。アットホームな雰囲気で芸人との距離が近い。",
     "price": 1200,
     "status": "販売中"
+  },
+  {
+    "id": 11,
+    "title": "超若手ネタバトル〜下剋上〜",
+    "date": "2026-03-29",
+    "startTime": "13:00",
+    "endTime": "15:00",
+    "type": "バトルライブ",
+    "theater": "manzai-gekijo",
+    "performers": ["tento", "paripinz", "misokatsu", "blindside", "nekoze", "genten"],
+    "description": "Dランク芸人たちによるガチンコネタバトル。優勝者は先輩たちの公演にゲスト出演の権利を獲得！下剋上を狙う超若手たちの真剣勝負。",
+    "price": 1000,
+    "status": "販売中"
+  },
+  {
+    "id": 12,
+    "title": "漫才劇場 ルーキーライブ 4月号",
+    "date": "2026-04-08",
+    "startTime": "18:00",
+    "endTime": "19:30",
+    "type": "ネタライブ",
+    "theater": "manzai-gekijo",
+    "performers": ["tento", "paripinz", "misokatsu", "salaryman", "blindside", "nekoze", "genten", "goldrush"],
+    "description": "超若手メンバー総出演のネタライブ。未来のスターを一足先にチェックできる月1恒例の人気公演。ワンコインで笑いまくれるお得なライブ。",
+    "price": 500,
+    "status": "近日発売"
+  },
+  {
+    "id": 13,
+    "title": "テント × ブラインドサイド 同期タイマン",
+    "date": "2026-04-13",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "type": "企画ライブ",
+    "theater": "manzai-gekijo",
+    "performers": ["tento", "blindside"],
+    "description": "NSC44期のライバル同士が直接対決！ネタ対決・大喜利対決・企画対決の3本勝負で決着をつける。同期ならではのアツいバトルに注目。",
+    "price": 1200,
+    "status": "近日発売"
+  },
+  {
+    "id": 14,
+    "title": "ゴールドラッシュのピン芸道場",
+    "date": "2026-04-15",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "type": "企画ライブ",
+    "theater": "manzai-gekijo",
+    "performers": ["goldrush"],
+    "description": "漫才劇場唯一のピン芸人ゴールドラッシュによるソロライブ。フリップネタ・ものまね・新企画を引っ提げて初の単独公演に挑む。",
+    "price": 1000,
+    "status": "近日発売"
+  },
+  {
+    "id": 15,
+    "title": "先輩×後輩 シャッフル漫才ライブ",
+    "date": "2026-04-20",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "type": "企画ライブ",
+    "theater": "manzai-gekijo",
+    "performers": ["batterys", "kaibeatsch", "tento", "paripinz", "misokatsu", "nekoze"],
+    "description": "先輩と後輩をシャッフルして即席コンビを結成！普段見られない組み合わせの化学反応に期待。超若手が先輩の胸を借りる特別企画。",
+    "price": 1500,
+    "status": "近日発売"
+  },
+  {
+    "id": 16,
+    "title": "森ノ宮 ルーキーお試しライブ",
+    "date": "2026-04-05",
+    "startTime": "13:00",
+    "endTime": "14:30",
+    "type": "ネタライブ",
+    "theater": "morinomiya",
+    "performers": ["salaryman", "genten", "goldrush", "nekoze"],
+    "description": "森ノ宮で超若手の新ネタをお試し価格で楽しめるライブ。芸人との距離が近いアットホームな空間で、未来のスターを応援しよう。",
+    "price": 500,
+    "status": "販売中"
   }
 ]

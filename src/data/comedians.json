@@ -118,5 +118,101 @@
     "description": "ハイテンションなリズムネタと独特のキャラクターで漫才劇場の盛り上げ番長。ライブの空気を一変させる爆発力を持つ。",
     "rank": "B",
     "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "tento",
+    "name": "テント",
+    "members": ["桑原雅人", "清水大輔"],
+    "formation": 2021,
+    "category": "漫才",
+    "nscYear": "NSC大阪44期",
+    "achievements": ["漫才劇場マンスリーバトル 2025年2月 優勝"],
+    "description": "NSC44期の期待株。正統派のしゃべくり漫才をベースに、キレのあるボケとテンポの良いツッコミで頭角を現している。マンスリーバトルでの優勝をきっかけに注目度急上昇。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "paripinz",
+    "name": "パリピンズ",
+    "members": ["たかし", "こうへい"],
+    "formation": 2022,
+    "category": "漫才",
+    "nscYear": "NSC大阪45期",
+    "achievements": ["漫才劇場バトルライブ 月間MVP 2026年1月"],
+    "description": "とにかく明るくノリの良い漫才が武器の超若手コンビ。客席を巻き込むパワーで、先輩芸人からも「おもろい」と評判。出番が来ると客席の空気が一変する。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "misokatsu",
+    "name": "ミソカツ",
+    "members": ["味噌田", "カツ山"],
+    "formation": 2022,
+    "category": "漫才",
+    "nscYear": "NSC大阪45期",
+    "achievements": ["NSC大阪45期 卒業ライブ 最優秀賞"],
+    "description": "名古屋出身の2人が大阪で結成した変わり種コンビ。地元ネタを織り交ぜた親しみやすい漫才で劇場の常連客に愛されている。卒業ライブ最優秀賞の実力派。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "salaryman",
+    "name": "サラリーマンズ",
+    "members": ["上田次郎", "下田三郎"],
+    "formation": 2023,
+    "category": "漫才",
+    "nscYear": "NSC大阪46期",
+    "achievements": [],
+    "description": "脱サラして芸人になった異色の経歴コンビ。社会人あるあるをベースにしたネタが同世代に刺さると話題。漫才劇場の新ネタライブの常連で着実に場数を踏んでいる。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "blindside",
+    "name": "ブラインドサイド",
+    "members": ["左京", "右京"],
+    "formation": 2021,
+    "category": "漫才",
+    "nscYear": "NSC大阪44期",
+    "achievements": ["M-1グランプリ2025 2回戦進出"],
+    "description": "ボケとツッコミが目まぐるしく入れ替わるスイッチ漫才が持ち味。同期のテントとは良きライバル関係。漫才劇場のバトルライブで勝率が高く、実力を評価されている。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "genten",
+    "name": "ゲンテン",
+    "members": ["原田あきら", "田中しんじ"],
+    "formation": 2023,
+    "category": "漫才",
+    "nscYear": "NSC大阪46期",
+    "achievements": [],
+    "description": "NSC46期の最注目ルーキー。入学当初から同期の中で圧倒的な存在感を見せ、異例のスピードで漫才劇場の舞台に立つようになった。シンプルだが破壊力のある漫才が魅力。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "nekoze",
+    "name": "ネコゼ",
+    "members": ["丸山けん", "佐藤ゆうた"],
+    "formation": 2022,
+    "category": "コント・漫才",
+    "nscYear": "NSC大阪45期",
+    "achievements": ["漫才劇場新人バトル 2025 準優勝"],
+    "description": "コントと漫才の両方をこなす器用なコンビ。丸山の独特な佇まいから繰り出されるシュールなボケが癖になると若い女性ファンが急増中。SNSのフォロワーも伸びている。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "goldrush",
+    "name": "ゴールドラッシュ",
+    "members": ["金山ヒカル"],
+    "formation": 2021,
+    "category": "ピン芸人",
+    "nscYear": "NSC大阪44期",
+    "achievements": ["R-1グランプリ2026 2回戦進出"],
+    "description": "漫才劇場では珍しいピン芸人。フリップネタとものまねを組み合わせた独自のスタイルで、ネタライブに欠かせない存在になりつつある。R-1グランプリにも挑戦中。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
   }
 ]
