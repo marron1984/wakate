@@ -35,15 +35,26 @@ export default function InterviewDetail({ interview, comedian, otherInterviews }
         <p className="text-sm t-muted">{interview.subtitle}</p>
       </div>
 
+      {/* Thumbnail */}
+      {interview.thumbnail && (
+        <div className="rounded-lg overflow-hidden mb-8 animate-fade-in delay-1">
+          <img
+            src={interview.thumbnail}
+            alt={interview.title}
+            className="w-full aspect-[2/1] object-cover"
+          />
+        </div>
+      )}
+
       {/* Tags */}
-      <div className="flex flex-wrap gap-1.5 mb-8 animate-fade-in delay-1">
+      <div className="flex flex-wrap gap-1.5 mb-6 animate-fade-in delay-1">
         {interview.tags.map(tag => (
           <span key={tag} className="tag text-[10px]">{tag}</span>
         ))}
       </div>
 
       {/* Intro */}
-      <div className="card p-6 mb-8 animate-fade-in-up delay-1">
+      <div className="card p-5 mb-8 animate-fade-in-up delay-1">
         <p className="text-sm t-secondary leading-relaxed">{interview.intro}</p>
       </div>
 

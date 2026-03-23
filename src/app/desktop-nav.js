@@ -42,7 +42,7 @@ export default function DesktopNav() {
         </button>
         {open && (
           <div
-            className="absolute top-full right-0 mt-2 w-44 rounded-xl border shadow-lg py-2 animate-fade-in z-50"
+            className="absolute top-full right-0 mt-2 w-44 rounded-lg border shadow-lg py-1 animate-fade-in z-50"
             style={{
               backgroundColor: 'rgb(var(--surface))',
               borderColor: 'rgb(var(--border))',
