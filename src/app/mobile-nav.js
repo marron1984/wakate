@@ -38,6 +38,7 @@ export default function MobileNav() {
                 { href: '/calendar', label: 'カレンダー' },
                 { href: '/theaters', label: '劇場案内' },
                 { href: '/glossary', label: '用語辞典' },
+                { href: '/interviews', label: 'インタビュー' },
                 { href: '/bmti', label: 'BMTI診断', accent: true },
                 { href: '/compatibility', label: '相性診断', accent: true },
               ].map((item, i) => (
