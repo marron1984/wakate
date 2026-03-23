@@ -23,26 +23,25 @@ export default function DesktopNav() {
   }, [])
 
   return (
-    <div className="hidden sm:flex items-center gap-1">
-      <a href="/" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">ホーム</a>
-      <a href="/events" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">公演情報</a>
-      <a href="/comedians" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">芸人一覧</a>
-      <a href="/interviews" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">インタビュー</a>
+    <div className="hidden sm:flex items-center gap-0.5 text-[13px]">
+      <a href="/" className="px-2.5 py-1.5 t-muted hover:text-[rgb(var(--text))] transition-colors">ホーム</a>
+      <a href="/events" className="px-2.5 py-1.5 t-muted hover:text-[rgb(var(--text))] transition-colors">公演情報</a>
+      <a href="/comedians" className="px-2.5 py-1.5 t-muted hover:text-[rgb(var(--text))] transition-colors">芸人一覧</a>
+      <a href="/interviews" className="px-2.5 py-1.5 t-muted hover:text-[rgb(var(--text))] transition-colors">インタビュー</a>
 
-      {/* More dropdown */}
       <div className="relative" ref={ref}>
         <button
           onClick={() => setOpen(!open)}
-          className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover flex items-center gap-1"
+          className="px-2.5 py-1.5 t-muted hover:text-[rgb(var(--text))] transition-colors flex items-center gap-0.5"
         >
           その他
-          <svg width="10" height="10" viewBox="0 0 10 10" className={`transition-transform ${open ? 'rotate-180' : ''}`}>
-            <path d="M2 4 L5 7 L8 4" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <svg width="8" height="8" viewBox="0 0 8 8" className={`transition-transform ${open ? 'rotate-180' : ''}`}>
+            <path d="M1.5 3 L4 5.5 L6.5 3" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
           </svg>
         </button>
         {open && (
           <div
-            className="absolute top-full right-0 mt-2 w-44 rounded-lg border shadow-lg py-1 animate-fade-in z-50"
+            className="absolute top-full right-0 mt-1 w-36 rounded border shadow-lg py-1 animate-fade-in z-50"
             style={{
               backgroundColor: 'rgb(var(--surface))',
               borderColor: 'rgb(var(--border))',
@@ -52,7 +51,7 @@ export default function DesktopNav() {
               <a
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-sm hover:bg-surface-hover transition-colors"
+                className="block px-3 py-1.5 text-[13px] t-muted hover:text-[rgb(var(--text))] hover:bg-surface-hover transition-colors"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -62,9 +61,10 @@ export default function DesktopNav() {
         )}
       </div>
 
-      <a href="/bmti" className="bg-accent-soft t-accent hover:opacity-80 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all">BMTI</a>
-      <a href="/compatibility" className="bg-gold-soft t-gold hover:opacity-80 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all">相性診断</a>
-      <div className="ml-2">
+      <span className="mx-1 text-[rgb(var(--border))]">|</span>
+      <a href="/bmti" className="px-2 py-1 t-accent text-[12px] font-bold hover:opacity-80 transition-opacity">BMTI</a>
+      <a href="/compatibility" className="px-2 py-1 t-sub text-[12px] font-bold hover:opacity-80 transition-opacity">相性診断</a>
+      <div className="ml-1.5">
         <ThemeSwitcher />
       </div>
     </div>

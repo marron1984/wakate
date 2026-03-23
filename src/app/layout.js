@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <header className="fixed top-0 w-full z-50 glass">
             <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
               <a href="/" className="font-black text-lg tracking-tighter">
-                WAKATE<span className="t-accent">.</span><span className="t-gold">Fun</span>
+                WAKATE<span className="t-accent">.Fun</span>
               </a>
 
               {/* Desktop nav */}
@@ -40,27 +40,27 @@ export default function RootLayout({ children }) {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
               <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
                 <div>
-                  <p className="font-black text-sm tracking-tighter mb-1">WAKATE<span className="t-accent">.</span><span className="t-gold">Fun</span></p>
+                  <p className="font-black text-sm tracking-tighter mb-1">WAKATE<span className="t-accent">.Fun</span></p>
                   <p className="text-xs t-muted">※ ファンメイドサイトです。吉本興業公式ではありません。</p>
                 </div>
-                <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs t-muted">
-                  <div className="space-y-2">
-                    <p className="text-[10px] font-bold uppercase tracking-wider t-accent">公演</p>
-                    <a href="/events" className="block hover:t-accent transition-colors">公演情報</a>
-                    <a href="/calendar" className="block hover:t-accent transition-colors">カレンダー</a>
-                    <a href="/theaters" className="block hover:t-accent transition-colors">劇場案内</a>
+                <div className="flex flex-wrap gap-x-6 gap-y-3 text-xs t-muted">
+                  <div className="space-y-1.5">
+                    <p className="text-[10px] font-bold tracking-wider t-accent">公演</p>
+                    <a href="/events" className="block hover:text-[rgb(var(--text))] transition-colors">公演情報</a>
+                    <a href="/calendar" className="block hover:text-[rgb(var(--text))] transition-colors">カレンダー</a>
+                    <a href="/theaters" className="block hover:text-[rgb(var(--text))] transition-colors">劇場案内</a>
                   </div>
-                  <div className="space-y-2">
-                    <p className="text-[10px] font-bold uppercase tracking-wider t-accent">芸人</p>
-                    <a href="/comedians" className="block hover:t-accent transition-colors">芸人一覧</a>
-                    <a href="/nsc" className="block hover:t-accent transition-colors">NSC期別</a>
-                    <a href="/interviews" className="block hover:t-accent transition-colors">インタビュー</a>
+                  <div className="space-y-1.5">
+                    <p className="text-[10px] font-bold tracking-wider t-accent">芸人</p>
+                    <a href="/comedians" className="block hover:text-[rgb(var(--text))] transition-colors">芸人一覧</a>
+                    <a href="/nsc" className="block hover:text-[rgb(var(--text))] transition-colors">NSC期別</a>
+                    <a href="/interviews" className="block hover:text-[rgb(var(--text))] transition-colors">インタビュー</a>
                   </div>
-                  <div className="space-y-2">
-                    <p className="text-[10px] font-bold uppercase tracking-wider t-accent">コンテンツ</p>
-                    <a href="/glossary" className="block hover:t-accent transition-colors">用語辞典</a>
-                    <a href="/bmti" className="block hover:t-accent transition-colors">BMTI診断</a>
-                    <a href="/compatibility" className="block hover:t-accent transition-colors">相性診断</a>
+                  <div className="space-y-1.5">
+                    <p className="text-[10px] font-bold tracking-wider t-accent">コンテンツ</p>
+                    <a href="/glossary" className="block hover:text-[rgb(var(--text))] transition-colors">用語辞典</a>
+                    <a href="/bmti" className="block hover:text-[rgb(var(--text))] transition-colors">BMTI診断</a>
+                    <a href="/compatibility" className="block hover:text-[rgb(var(--text))] transition-colors">相性診断</a>
                   </div>
                 </div>
               </div>
