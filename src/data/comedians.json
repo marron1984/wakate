@@ -1,78 +1,122 @@
 [
   {
-    "id": "reiwa-rozan",
+    "id": "reiwa-roman",
     "name": "令和ロマン",
     "members": ["髙比良くるま", "松井ケムリ"],
     "formation": 2017,
-    "agency": "吉本興業",
     "category": "漫才",
+    "nscYear": "NSC東京23期",
     "achievements": ["M-1グランプリ2023 優勝", "M-1グランプリ2024 優勝（史上初の連覇）"],
-    "description": "慶應義塾大学出身のインテリ漫才コンビ。くるまの独特なボケとケムリの的確なツッコミで人気急上昇。M-1史上初の連覇を達成。",
-    "homeTheater": "ルミネtheよしもと",
-    "sns": {
-      "youtube": "令和ロマン公式チャンネル"
-    }
+    "description": "慶應義塾大学お笑いサークル出身。くるまの独特なボケとケムリの的確なツッコミで、M-1史上初の連覇を達成した実力派。漫才劇場を経て東京でも活躍中。",
+    "rank": "A",
+    "homeTheater": "manzai-gekijo"
   },
   {
-    "id": "shadoten",
-    "name": "シャッフルアイランド",
-    "members": ["ゴンちゃん", "タクミ"],
-    "formation": 2019,
-    "agency": "吉本興業",
+    "id": "batterys",
+    "name": "バッテリィズ",
+    "members": ["エース", "寺家よしの"],
+    "formation": 2017,
     "category": "漫才",
-    "achievements": ["ABCお笑いグランプリ2024 決勝進出"],
-    "description": "大阪を拠点に活動する若手漫才コンビ。独創的なネタで注目を集めている。",
-    "homeTheater": "よしもと漫才劇場",
-    "sns": {}
-  },
-  {
-    "id": "kayano-hinano",
-    "name": "カゲヤマ",
-    "members": ["カゲヤマ"],
-    "formation": 2020,
-    "agency": "吉本興業",
-    "category": "ピン芸人",
-    "achievements": ["R-1グランプリ2025 決勝進出"],
-    "description": "独特の世界観を持つピン芸人。シュールなネタで若い世代を中心に人気。",
-    "homeTheater": "よしもと∞ホール",
-    "sns": {}
+    "nscYear": "NSC大阪40期",
+    "achievements": ["M-1グランプリ2024 決勝3位", "ABCお笑いグランプリ2023 優勝", "ytv漫才新人賞2024 優勝"],
+    "description": "エースの天然キャラクターと寺家の鋭いツッコミが織りなすテンポの良い漫才が魅力。漫才劇場の看板コンビの一組。",
+    "rank": "A",
+    "homeTheater": "manzai-gekijo"
   },
   {
     "id": "daihinmin",
-    "name": "ダイヒンミン",
-    "members": ["ダイちゃん", "ヒンちゃん"],
-    "formation": 2018,
-    "agency": "吉本興業",
+    "name": "ダイタク",
+    "members": ["ダイ", "タク"],
+    "formation": 2010,
     "category": "漫才",
-    "achievements": ["M-1グランプリ2024 準決勝進出"],
-    "description": "パワフルな漫才スタイルで知られるコンビ。劇場での人気が高い。",
-    "homeTheater": "よしもと漫才劇場",
-    "sns": {}
+    "nscYear": "NSC大阪33期",
+    "achievements": ["M-1グランプリ2024 準決勝進出", "NHK上方漫才コンテスト 決勝進出"],
+    "description": "双子の兄弟コンビ。息の合ったテンポと独特の間で漫才劇場のベテラン枠として活躍。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
   },
   {
-    "id": "veranda",
-    "name": "バッテリィズ",
-    "members": ["エース", "寺家"],
+    "id": "tenten",
+    "name": "テンダラー",
+    "members": ["浜本広晃", "白川悟実"],
+    "formation": 1994,
+    "category": "漫才",
+    "nscYear": "NSC大阪15期",
+    "achievements": ["THE MANZAI 2011 決勝進出", "ABCお笑いグランプリ 優勝"],
+    "description": "漫才劇場のベテラン。正統派しゃべくり漫才の実力者として若手の手本となっている。",
+    "rank": "S",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "kaibeatsch",
+    "name": "カベポスター",
+    "members": ["永見大吾", "浜田順平"],
+    "formation": 2014,
+    "category": "漫才",
+    "nscYear": "NSC大阪36期",
+    "achievements": ["M-1グランプリ2023 決勝進出", "ABCお笑いグランプリ2022 優勝"],
+    "description": "知的で練り上げられた構成力が持ち味。漫才劇場で着実にファンを増やし、賞レースでも結果を残している。",
+    "rank": "A",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "danchizuma",
+    "name": "ドーナツ・ピーナツ",
+    "members": ["ドーナツ", "ピーナツ"],
+    "formation": 2019,
+    "category": "漫才",
+    "nscYear": "NSC大阪42期",
+    "achievements": ["よしもと漫才劇場大賞2025 新人賞"],
+    "description": "漫才劇場の期待の新星。独創的なネタ作りとフレッシュな掛け合いで急速に人気上昇中。",
+    "rank": "C",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "taiga",
+    "name": "ヤーレンズ",
+    "members": ["楢原真樹", "出井隼之介"],
     "formation": 2017,
-    "agency": "吉本興業",
     "category": "漫才",
-    "achievements": ["M-1グランプリ2024 決勝進出", "ABCお笑いグランプリ2023 優勝"],
-    "description": "大阪発の実力派漫才コンビ。エースの天然キャラとツッコミのテンポの良さが魅力。",
-    "homeTheater": "よしもと漫才劇場",
-    "sns": {
-      "youtube": "バッテリィズ公式"
-    }
+    "nscYear": "NSC東京22期",
+    "achievements": ["M-1グランプリ2023 決勝2位", "ツギクル芸人グランプリ2022 優勝"],
+    "description": "独特のワードセンスと予測不能な展開で人気。漫才劇場出身で東京を拠点に全国区の人気を獲得。",
+    "rank": "A",
+    "homeTheater": "manzai-gekijo"
   },
   {
-    "id": "tony-fresh",
-    "name": "トニーフレッシュ",
-    "members": ["トニー", "フレッシュ"],
-    "formation": 2021,
-    "agency": "吉本興業",
+    "id": "maruhon",
+    "name": "ニッポンの社長",
+    "members": ["辻", "ケツ"],
+    "formation": 2013,
+    "category": "コント・漫才",
+    "nscYear": "NSC大阪35期",
+    "achievements": ["キングオブコント2024 決勝進出", "ABCお笑いグランプリ2021 決勝進出"],
+    "description": "コントも漫才もこなす実力派。独特の世界観と爆発力のあるネタで漫才劇場を沸かせている。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "warainu",
+    "name": "ロングコートダディ",
+    "members": ["堂前透", "兎"],
+    "formation": 2009,
+    "category": "漫才・コント",
+    "nscYear": "NSC大阪33期",
+    "achievements": ["M-1グランプリ2022 決勝進出", "キングオブコント2021 準優勝"],
+    "description": "漫才もコントも高いレベルでこなす二刀流コンビ。堂前の独特なワードセンスが人気。漫才劇場の人気者。",
+    "rank": "A",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "fullfull",
+    "name": "フースーヤ",
+    "members": ["谷口理", "田中ショータイム"],
+    "formation": 2014,
     "category": "漫才",
-    "achievements": ["よしもと漫才劇場大賞2024 新人賞"],
-    "description": "結成間もないが勢いのある若手コンビ。フレッシュな感性のネタが評判。",
-    "homeTheater": "よしもと漫才劇場",
-    "sns": {}
+    "nscYear": "NSC大阪36期",
+    "achievements": ["よしもと漫才劇場大賞2023 大賞"],
+    "description": "ハイテンションなリズムネタと独特のキャラクターで漫才劇場の盛り上げ番長。ライブの空気を一変させる爆発力を持つ。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
   }
 ]
