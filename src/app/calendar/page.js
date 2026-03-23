@@ -187,9 +187,15 @@ export default function CalendarPage() {
 
                   <p className="text-sm t-muted mb-3">{ev.description}</p>
 
-                  <div className="flex flex-wrap gap-x-5 gap-y-1 text-xs t-muted mb-3">
+                  <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-xs t-muted mb-3">
                     <span>🕐 {ev.startTime}〜{ev.endTime}</span>
                     <span>💴 ¥{ev.price.toLocaleString()}</span>
+                    {ev.ticketUrl && ev.status === '販売中' && (
+                      <a href={ev.ticketUrl} target="_blank" rel="noopener noreferrer" className="btn-primary ml-auto">チケットを購入</a>
+                    )}
+                    {ev.ticketUrl && ev.status === '近日発売' && (
+                      <span className="ml-auto text-[11px] t-muted border rounded px-2.5 py-1" style={{ borderColor: 'rgb(var(--border))' }}>近日発売</span>
+                    )}
                   </div>
 
                   {performers.length > 0 && (
