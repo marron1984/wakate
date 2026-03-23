@@ -5,11 +5,11 @@ import { createContext, useContext, useState, useEffect } from 'react'
 const ThemeContext = createContext({ theme: 'dark', setTheme: () => {} })
 
 const THEMES = [
-  { id: 'dark', label: 'Dark', icon: '🌑' },
-  { id: 'light', label: 'Light', icon: '☀️' },
-  { id: 'midnight', label: 'Midnight', icon: '🌌' },
-  { id: 'sunset', label: 'Sunset', icon: '🌅' },
-  { id: 'forest', label: 'Forest', icon: '🌲' },
+  { id: 'dark', label: 'ダーク', icon: '🌑' },
+  { id: 'light', label: 'ライト', icon: '☀️' },
+  { id: 'midnight', label: 'ミッドナイト', icon: '🌌' },
+  { id: 'sunset', label: 'サンセット', icon: '🌅' },
+  { id: 'forest', label: 'フォレスト', icon: '🌲' },
 ]
 
 export { THEMES }

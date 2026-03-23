@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
 
               {/* Desktop nav */}
               <div className="hidden sm:flex items-center gap-1">
-                <a href="/" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">Home</a>
-                <a href="/events" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">Events</a>
-                <a href="/comedians" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">Comedians</a>
-                <a href="/theaters" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">Theater</a>
-                <a href="/compatibility" className="bg-gold-soft t-gold hover:opacity-80 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all">Diagnosis</a>
+                <a href="/" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">ホーム</a>
+                <a href="/events" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">公演情報</a>
+                <a href="/comedians" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">芸人一覧</a>
+                <a href="/theaters" className="btn-ghost px-3 py-1.5 rounded-lg hover:bg-surface-hover">劇場案内</a>
+                <a href="/compatibility" className="bg-gold-soft t-gold hover:opacity-80 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all">相性診断</a>
                 <div className="ml-2">
                   <ThemeSwitcher />
                 </div>
@@ -48,12 +48,12 @@ export default function RootLayout({ children }) {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <p className="font-black text-sm tracking-tighter">WAKA<span className="t-accent">TE</span></p>
-                <p className="text-xs t-muted mt-1">Fan-made site. Not affiliated with Yoshimoto Kogyo.</p>
+                <p className="text-xs t-muted mt-1">※ ファンメイドサイトです。吉本興業公式ではありません。</p>
               </div>
               <div className="flex gap-6 text-xs t-muted">
-                <a href="/events" className="hover:t-accent transition-colors">Events</a>
-                <a href="/comedians" className="hover:t-accent transition-colors">Comedians</a>
-                <a href="/compatibility" className="hover:t-accent transition-colors">Diagnosis</a>
+                <a href="/events" className="hover:t-accent transition-colors">公演情報</a>
+                <a href="/comedians" className="hover:t-accent transition-colors">芸人一覧</a>
+                <a href="/compatibility" className="hover:t-accent transition-colors">相性診断</a>
               </div>
             </div>
           </footer>

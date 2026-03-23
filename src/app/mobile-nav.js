@@ -31,11 +31,11 @@ export default function MobileNav() {
           >
             <nav className="space-y-1 mb-6">
               {[
-                { href: '/', label: 'Home' },
-                { href: '/events', label: 'Events' },
-                { href: '/comedians', label: 'Comedians' },
-                { href: '/theaters', label: 'Theater' },
-                { href: '/compatibility', label: 'Diagnosis', accent: true },
+                { href: '/', label: 'ホーム' },
+                { href: '/events', label: '公演情報' },
+                { href: '/comedians', label: '芸人一覧' },
+                { href: '/theaters', label: '劇場案内' },
+                { href: '/compatibility', label: '相性診断', accent: true },
               ].map((item, i) => (
                 <a
                   key={item.href}
@@ -52,7 +52,7 @@ export default function MobileNav() {
             </nav>
 
             <div className="border-t pt-4 animate-fade-in-up delay-6" style={{ borderColor: 'rgb(var(--border))' }}>
-              <p className="text-[10px] t-muted uppercase tracking-wider mb-3 px-1">Theme</p>
+              <p className="text-[10px] t-muted tracking-wider mb-3 px-1">テーマ</p>
               <ThemeSwitcher variant="inline" />
             </div>
           </div>
