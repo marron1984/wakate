@@ -8,6 +8,7 @@ const moreItems = [
   { href: '/calendar', label: 'カレンダー' },
   { href: '/theaters', label: '劇場案内' },
   { href: '/glossary', label: '用語辞典' },
+  { href: '/sns', label: 'SNSまとめ' },
 ]
 
 export default function DesktopNav() {

@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
                     <a href="/glossary" className="block hover:text-[rgb(var(--text))] transition-colors">用語辞典</a>
                     <a href="/bmti" className="block hover:text-[rgb(var(--text))] transition-colors">BMTI診断</a>
                     <a href="/compatibility" className="block hover:text-[rgb(var(--text))] transition-colors">相性診断</a>
+                    <a href="/sns" className="block hover:text-[rgb(var(--text))] transition-colors">SNSまとめ</a>
                   </div>
                 </div>
               </div>

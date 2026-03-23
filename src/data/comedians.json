@@ -9,7 +9,12 @@
     "achievements": ["THE MANZAI 2011 決勝進出", "ABCお笑いグランプリ 優勝"],
     "description": "漫才劇場のベテラン。正統派しゃべくり漫才の実力者として若手の手本となっている。",
     "rank": "S",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/tenderler_official",
+      "youtube": "https://www.youtube.com/channel/tenderler",
+      "instagram": "https://www.instagram.com/tenderler_official"
+    }
   },
   {
     "id": "span",
@@ -21,7 +26,12 @@
     "achievements": ["M-1グランプリ2017 決勝進出", "M-1グランプリ2018 決勝進出"],
     "description": "田中のシュールなボケと武智の激しいツッコミが特徴。漫才劇場の大ベテランとして若手を引っ張る存在。",
     "rank": "S",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/supermaradona_",
+      "youtube": "https://www.youtube.com/channel/supermaradona",
+      "tiktok": "https://www.tiktok.com/@supermaradona"
+    }
   },
   {
     "id": "ginshari",
@@ -33,7 +43,12 @@
     "achievements": ["M-1グランプリ2016 優勝"],
     "description": "M-1王者の実力派コンビ。正統派のしゃべくり漫才で、漫才劇場の格を上げる存在。鰻の天然ボケと橋本のツッコミは絶品。",
     "rank": "S",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/ginshari_combi",
+      "youtube": "https://www.youtube.com/@ginshari_ch",
+      "instagram": "https://www.instagram.com/ginshari_official"
+    }
   },
   {
     "id": "reiwa-roman",
@@ -45,7 +60,13 @@
     "achievements": ["M-1グランプリ2023 優勝", "M-1グランプリ2024 優勝（史上初の連覇）"],
     "description": "慶應義塾大学お笑いサークル出身。くるまの独特なボケとケムリの的確なツッコミで、M-1史上初の連覇を達成した実力派。漫才劇場を経て東京でも活躍中。",
     "rank": "A",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/reiwaroman2024",
+      "youtube": "https://www.youtube.com/@reiwaroman_ch",
+      "instagram": "https://www.instagram.com/reiwaroman_official",
+      "tiktok": "https://www.tiktok.com/@reiwaroman"
+    }
   },
   {
     "id": "batterys",
@@ -57,7 +78,13 @@
     "achievements": ["M-1グランプリ2024 決勝3位", "ABCお笑いグランプリ2023 優勝", "ytv漫才新人賞2024 優勝"],
     "description": "エースの天然キャラクターと寺家の鋭いツッコミが織りなすテンポの良い漫才が魅力。漫才劇場の看板コンビの一組。",
     "rank": "A",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/batterys_combi",
+      "youtube": "https://www.youtube.com/@batterys_ch",
+      "instagram": "https://www.instagram.com/batterys_official",
+      "tiktok": "https://www.tiktok.com/@batterys_combi"
+    }
   },
   {
     "id": "kaibeatsch",
@@ -69,7 +96,12 @@
     "achievements": ["M-1グランプリ2023 決勝進出", "ABCお笑いグランプリ2022 優勝"],
     "description": "知的で練り上げられた構成力が持ち味。漫才劇場で着実にファンを増やし、賞レースでも結果を残している。",
     "rank": "A",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/kabeposter",
+      "youtube": "https://www.youtube.com/@kabeposter_ch",
+      "instagram": "https://www.instagram.com/kabeposter_official"
+    }
   },
   {
     "id": "taiga",
@@ -81,7 +113,12 @@
     "achievements": ["M-1グランプリ2023 決勝2位", "ツギクル芸人グランプリ2022 優勝"],
     "description": "独特のワードセンスと予測不能な展開で人気。漫才劇場出身で東京を拠点に全国区の人気を獲得。",
     "rank": "A",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/yalens_official",
+      "youtube": "https://www.youtube.com/@yalens_ch",
+      "tiktok": "https://www.tiktok.com/@yalens"
+    }
   },
   {
     "id": "warainu",
@@ -93,7 +130,13 @@
     "achievements": ["M-1グランプリ2022 決勝進出", "キングオブコント2021 準優勝"],
     "description": "漫才もコントも高いレベルでこなす二刀流コンビ。堂前の独特なワードセンスが人気。漫才劇場の人気者。",
     "rank": "A",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/longcoatdaddy",
+      "youtube": "https://www.youtube.com/@longcoatdaddy_ch",
+      "instagram": "https://www.instagram.com/longcoatdaddy",
+      "tiktok": "https://www.tiktok.com/@longcoatdaddy"
+    }
   },
   {
     "id": "drass",
@@ -105,7 +148,11 @@
     "achievements": ["M-1グランプリ2024 準決勝進出", "ytv漫才新人賞2023 決勝進出"],
     "description": "ナオキのキャラクターを活かした独特の間と空気感のある漫才が持ち味。漫才劇場で確実に実力をつけ、賞レースでも結果を出し始めている。",
     "rank": "A",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/drass_manzai",
+      "instagram": "https://www.instagram.com/drass_manzai"
+    }
   },
   {
     "id": "daihinmin",
@@ -117,7 +164,11 @@
     "achievements": ["M-1グランプリ2024 準決勝進出", "NHK上方漫才コンテスト 決勝進出"],
     "description": "双子の兄弟コンビ。息の合ったテンポと独特の間で漫才劇場のベテラン枠として活躍。",
     "rank": "B",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/daitaku_twins",
+      "youtube": "https://www.youtube.com/@daitaku_ch"
+    }
   },
   {
     "id": "maruhon",
@@ -129,7 +180,12 @@
     "achievements": ["キングオブコント2024 決勝進出", "ABCお笑いグランプリ2021 決勝進出"],
     "description": "コントも漫才もこなす実力派。独特の世界観と爆発力のあるネタで漫才劇場を沸かせている。",
     "rank": "B",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/nippon_shacho",
+      "youtube": "https://www.youtube.com/@nippon_shacho",
+      "tiktok": "https://www.tiktok.com/@nippon_shacho"
+    }
   },
   {
     "id": "fullfull",
@@ -141,7 +197,13 @@
     "achievements": ["よしもと漫才劇場大賞2023 大賞"],
     "description": "ハイテンションなリズムネタと独特のキャラクターで漫才劇場の盛り上げ番長。ライブの空気を一変させる爆発力を持つ。",
     "rank": "B",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/whosuya_combi",
+      "youtube": "https://www.youtube.com/@whosuya_ch",
+      "instagram": "https://www.instagram.com/whosuya_combi",
+      "tiktok": "https://www.tiktok.com/@whosuya"
+    }
   },
   {
     "id": "taikou",
@@ -153,7 +215,11 @@
     "achievements": ["M-1グランプリ2025 準々決勝進出"],
     "description": "テンポの速い漫才が武器。漫才劇場のバトルライブで常に上位に入る安定感のあるコンビ。着実にファンを増やしている。",
     "rank": "B",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/timekeeper_mc",
+      "instagram": "https://www.instagram.com/timekeeper_mc"
+    }
   },
   {
     "id": "danvine",
@@ -165,7 +231,12 @@
     "achievements": ["M-1グランプリ2023 準決勝進出", "よしもと漫才劇場大賞2022 大賞"],
     "description": "歌ネタとしゃべくり漫才を融合させた独自のスタイル。漫才劇場大賞を受賞し、劇場を代表するコンビに成長。",
     "rank": "B",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/danbiramucho",
+      "youtube": "https://www.youtube.com/@danbiramucho",
+      "tiktok": "https://www.tiktok.com/@danbiramucho"
+    }
   },
   {
     "id": "tachinbo",
@@ -177,7 +248,10 @@
     "achievements": ["ABCお笑いグランプリ2024 決勝進出"],
     "description": "理論派のネタ作りで知られるコンビ。計算し尽くされた構成と意外性のあるオチで玄人筋からの評価が高い。",
     "rank": "B",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/tachimachi_mc"
+    }
   },
   {
     "id": "chouhatsu",
@@ -189,7 +263,12 @@
     "achievements": ["M-1グランプリ2024 準決勝進出", "よしもと漫才劇場大賞2024 大賞"],
     "description": "中村の愛されキャラクターと子森のキレキレのツッコミが光るコンビ。漫才劇場大賞2024を受賞し、勢いに乗っている。",
     "rank": "B",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/henderson_combi",
+      "youtube": "https://www.youtube.com/@henderson_ch",
+      "instagram": "https://www.instagram.com/henderson_combi"
+    }
   },
   {
     "id": "danchizuma",
@@ -201,7 +280,12 @@
     "achievements": ["よしもと漫才劇場大賞2025 新人賞"],
     "description": "漫才劇場の期待の新星。独創的なネタ作りとフレッシュな掛け合いで急速に人気上昇中。",
     "rank": "C",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/donutspeanuts",
+      "instagram": "https://www.instagram.com/donutspeanuts",
+      "tiktok": "https://www.tiktok.com/@donutspeanuts"
+    }
   },
   {
     "id": "kaimono",
@@ -213,7 +297,10 @@
     "achievements": ["M-1グランプリ2025 3回戦進出"],
     "description": "日常の何気ないシチュエーションを切り取った親しみやすい漫才が持ち味。漫才劇場の常連で堅実にファンを増やしている。",
     "rank": "C",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/kaimono_manzai"
+    }
   },
   {
     "id": "musicair",
@@ -225,7 +312,11 @@
     "achievements": ["漫才劇場マンスリーバトル 2025年1月 優勝"],
     "description": "音楽ネタと正統派漫才を使い分ける器用なコンビ。マンスリーバトルの常連で、劇場での安定感は抜群。",
     "rank": "C",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/musicair_mc",
+      "youtube": "https://www.youtube.com/@musicair_ch"
+    }
   },
   {
     "id": "wabisabi",
@@ -237,7 +328,11 @@
     "achievements": ["漫才劇場新人バトル 2024 優勝"],
     "description": "渋めのテーマを若い感性で料理する独特のスタイル。新人バトルを制した実力は本物で、Cランクへの昇格も最速だった。",
     "rank": "C",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/wabisabi_mc",
+      "instagram": "https://www.instagram.com/wabisabi_mc"
+    }
   },
   {
     "id": "spicecurry",
@@ -249,7 +344,11 @@
     "achievements": ["M-1グランプリ2025 2回戦進出"],
     "description": "名前の通りピリッとスパイスの効いたボケが特徴。テンポの緩急をつけた漫才で漫才劇場の中堅として活躍中。",
     "rank": "C",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/spicecurry_mc",
+      "tiktok": "https://www.tiktok.com/@spicecurry_mc"
+    }
   },
   {
     "id": "tent",
@@ -261,7 +360,12 @@
     "achievements": ["漫才劇場マンスリーバトル 2025年2月 優勝"],
     "description": "NSC44期の期待株。正統派のしゃべくり漫才をベースに、キレのあるボケとテンポの良いツッコミで頭角を現している。マンスリーバトルでの優勝をきっかけに注目度急上昇。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/tent_manzai",
+      "instagram": "https://www.instagram.com/tent_manzai",
+      "tiktok": "https://www.tiktok.com/@tent_manzai"
+    }
   },
   {
     "id": "paripinz",
@@ -273,7 +377,12 @@
     "achievements": ["漫才劇場バトルライブ 月間MVP 2026年1月"],
     "description": "とにかく明るくノリの良い漫才が武器の超若手コンビ。客席を巻き込むパワーで先輩芸人からも「おもろい」と評判。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/paripinz",
+      "tiktok": "https://www.tiktok.com/@paripinz",
+      "instagram": "https://www.instagram.com/paripinz"
+    }
   },
   {
     "id": "misokatsu",
@@ -285,7 +394,10 @@
     "achievements": ["NSC大阪45期 卒業ライブ 最優秀賞"],
     "description": "名古屋出身の2人が大阪で結成した変わり種コンビ。地元ネタを織り交ぜた親しみやすい漫才で劇場の常連客に愛されている。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/misokatsu_mc"
+    }
   },
   {
     "id": "salaryman",
@@ -297,7 +409,10 @@
     "achievements": [],
     "description": "脱サラして芸人になった異色の経歴コンビ。社会人あるあるをベースにしたネタが同世代に刺さると話題。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/salarymans_mc"
+    }
   },
   {
     "id": "blindside",
@@ -309,7 +424,11 @@
     "achievements": ["M-1グランプリ2025 2回戦進出"],
     "description": "ボケとツッコミが目まぐるしく入れ替わるスイッチ漫才が持ち味。同期のテントとは良きライバル関係。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/blindside_mc",
+      "instagram": "https://www.instagram.com/blindside_mc"
+    }
   },
   {
     "id": "genten",
@@ -321,7 +440,10 @@
     "achievements": [],
     "description": "NSC46期の最注目ルーキー。入学当初から圧倒的な存在感を見せ、異例のスピードで漫才劇場の舞台に立つようになった。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/genten_mc"
+    }
   },
   {
     "id": "nekoze",
@@ -333,7 +455,12 @@
     "achievements": ["漫才劇場新人バトル 2025 準優勝"],
     "description": "コントと漫才の両方をこなす器用なコンビ。丸山の独特な佇まいから繰り出されるシュールなボケが癖になると若い女性ファンが急増中。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/nekoze_combi",
+      "instagram": "https://www.instagram.com/nekoze_combi",
+      "tiktok": "https://www.tiktok.com/@nekoze_combi"
+    }
   },
   {
     "id": "goldrush",
@@ -345,7 +472,12 @@
     "achievements": ["R-1グランプリ2026 2回戦進出"],
     "description": "漫才劇場では珍しいピン芸人。フリップネタとものまねを組み合わせた独自のスタイルで存在感を発揮。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/goldrush_pin",
+      "youtube": "https://www.youtube.com/@goldrush_pin",
+      "tiktok": "https://www.tiktok.com/@goldrush_pin"
+    }
   },
   {
     "id": "flashmob",
@@ -357,7 +489,11 @@
     "achievements": ["M-1グランプリ2025 2回戦進出"],
     "description": "突然テンションが上がる予測不能なボケが持ち味。劇場のお客さんを驚かせることに命をかけている。同期の中で最もライブ本数が多い努力家。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/flashmob_mc",
+      "tiktok": "https://www.tiktok.com/@flashmob_mc"
+    }
   },
   {
     "id": "tsunagari",
@@ -369,7 +505,10 @@
     "achievements": [],
     "description": "幼馴染コンビ。小学校からの付き合いで培った抜群のコンビネーションが武器。ほのぼのとした雰囲気の漫才で劇場に温かい空気を作る。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/tsunagari_mc"
+    }
   },
   {
     "id": "dynamite",
@@ -381,7 +520,10 @@
     "achievements": [],
     "description": "NSC46期の爆裂コンビ。とにかく声がデカくて勢いがある。荒削りだが爆発力は同期随一で、先輩芸人からも「化ける可能性がある」と期待されている。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/dynamitekids_mc"
+    }
   },
   {
     "id": "engawa",
@@ -393,6 +535,10 @@
     "achievements": [],
     "description": "ゆるいテンポの脱力系漫才が持ち味のNSC46期コンビ。独特の間で笑いを取るスタイルは好みが分かれるが、ハマる人は中毒になるとコアなファンがつき始めている。",
     "rank": "D",
-    "homeTheater": "manzai-gekijo"
+    "homeTheater": "manzai-gekijo",
+    "sns": {
+      "x": "https://x.com/engawa_mc",
+      "instagram": "https://www.instagram.com/engawa_mc"
+    }
   }
 ]

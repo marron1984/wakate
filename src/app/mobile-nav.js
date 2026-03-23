@@ -30,6 +30,7 @@ const navGroups = [
     label: 'コンテンツ',
     items: [
       { href: '/glossary', label: '用語辞典' },
+      { href: '/sns', label: 'SNSまとめ' },
       { href: '/bmti', label: 'BMTI診断', highlight: true },
       { href: '/compatibility', label: '相性診断', highlight: true },
     ],
