@@ -9,7 +9,17 @@ function getCategoryColor(category) {
     case 'メディア': return 'bg-blue-500 text-white'
     case '受賞': return 'bg-purple-500 text-white'
     case '注目若手': return 'bg-emerald-500 text-white'
+    case 'ニュース': return 'bg-gray-600 text-white'
     default: return 'bg-gray-200 text-gray-700'
+  }
+}
+
+function getStatusColor(status) {
+  switch (status) {
+    case '販売中': return 'bg-green-500 text-white'
+    case '近日発売': return 'bg-orange-400 text-white'
+    case '完売': return 'bg-gray-500 text-white'
+    default: return 'bg-gray-300 text-gray-700'
   }
 }
 
@@ -90,12 +100,12 @@ export default function Home() {
         <div className="lg:col-span-2">
           <h2 className="text-2xl font-bold mb-6 border-l-4 border-yoshimoto-red pl-3">最新ニュース</h2>
           <div className="space-y-4">
-            {newsData.map((news) => {
+            {newsData.slice(0, 15).map((news) => {
               const comedian = news.comedianId
                 ? comediansData.find(c => c.id === news.comedianId)
                 : null
               return (
-                <article key={news.id} className="card">
+                <article key={news.id} className={`card ${news.event ? 'border-l-4 border-l-yoshimoto-red' : ''}`}>
                   <div className="flex items-center gap-3 mb-2">
                     <span className={`badge ${getCategoryColor(news.category)}`}>
                       {news.category}
@@ -104,6 +114,17 @@ export default function Home() {
                   </div>
                   <h3 className="text-lg font-bold mb-2">{news.title}</h3>
                   <p className="text-gray-600 text-sm">{news.summary}</p>
+                  {news.event && (
+                    <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+                      <span className="bg-gray-100 px-2 py-1 rounded">📅 {news.event.date}</span>
+                      <span className="bg-gray-100 px-2 py-1 rounded">🕐 {news.event.time}〜</span>
+                      <span className="bg-gray-100 px-2 py-1 rounded">💴 ¥{news.event.price.toLocaleString()}</span>
+                      <span className="bg-gray-100 px-2 py-1 rounded">📍 {news.event.theater}</span>
+                      <span className={`px-2 py-1 rounded font-medium ${getStatusColor(news.event.status)}`}>
+                        {news.event.status}
+                      </span>
+                    </div>
+                  )}
                   {comedian && (
                     <a
                       href={`/comedians/${comedian.id}`}

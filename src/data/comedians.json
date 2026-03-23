@@ -1,5 +1,41 @@
 [
   {
+    "id": "tenten",
+    "name": "テンダラー",
+    "members": ["浜本広晃", "白川悟実"],
+    "formation": 1994,
+    "category": "漫才",
+    "nscYear": "NSC大阪15期",
+    "achievements": ["THE MANZAI 2011 決勝進出", "ABCお笑いグランプリ 優勝"],
+    "description": "漫才劇場のベテラン。正統派しゃべくり漫才の実力者として若手の手本となっている。",
+    "rank": "S",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "span",
+    "name": "スーパーマラドーナ",
+    "members": ["田中一彦", "武智"],
+    "formation": 2003,
+    "category": "漫才",
+    "nscYear": "NSC大阪25期",
+    "achievements": ["M-1グランプリ2017 決勝進出", "M-1グランプリ2018 決勝進出"],
+    "description": "田中のシュールなボケと武智の激しいツッコミが特徴。漫才劇場の大ベテランとして若手を引っ張る存在。",
+    "rank": "S",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "ginshari",
+    "name": "銀シャリ",
+    "members": ["橋本直", "鰻和弘"],
+    "formation": 2005,
+    "category": "漫才",
+    "nscYear": "NSC大阪27期",
+    "achievements": ["M-1グランプリ2016 優勝"],
+    "description": "M-1王者の実力派コンビ。正統派のしゃべくり漫才で、漫才劇場の格を上げる存在。鰻の天然ボケと橋本のツッコミは絶品。",
+    "rank": "S",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
     "id": "reiwa-roman",
     "name": "令和ロマン",
     "members": ["髙比良くるま", "松井ケムリ"],
@@ -24,30 +60,6 @@
     "homeTheater": "manzai-gekijo"
   },
   {
-    "id": "daihinmin",
-    "name": "ダイタク",
-    "members": ["ダイ", "タク"],
-    "formation": 2010,
-    "category": "漫才",
-    "nscYear": "NSC大阪33期",
-    "achievements": ["M-1グランプリ2024 準決勝進出", "NHK上方漫才コンテスト 決勝進出"],
-    "description": "双子の兄弟コンビ。息の合ったテンポと独特の間で漫才劇場のベテラン枠として活躍。",
-    "rank": "B",
-    "homeTheater": "manzai-gekijo"
-  },
-  {
-    "id": "tenten",
-    "name": "テンダラー",
-    "members": ["浜本広晃", "白川悟実"],
-    "formation": 1994,
-    "category": "漫才",
-    "nscYear": "NSC大阪15期",
-    "achievements": ["THE MANZAI 2011 決勝進出", "ABCお笑いグランプリ 優勝"],
-    "description": "漫才劇場のベテラン。正統派しゃべくり漫才の実力者として若手の手本となっている。",
-    "rank": "S",
-    "homeTheater": "manzai-gekijo"
-  },
-  {
     "id": "kaibeatsch",
     "name": "カベポスター",
     "members": ["永見大吾", "浜田順平"],
@@ -57,18 +69,6 @@
     "achievements": ["M-1グランプリ2023 決勝進出", "ABCお笑いグランプリ2022 優勝"],
     "description": "知的で練り上げられた構成力が持ち味。漫才劇場で着実にファンを増やし、賞レースでも結果を残している。",
     "rank": "A",
-    "homeTheater": "manzai-gekijo"
-  },
-  {
-    "id": "danchizuma",
-    "name": "ドーナツ・ピーナツ",
-    "members": ["ドーナツ", "ピーナツ"],
-    "formation": 2019,
-    "category": "漫才",
-    "nscYear": "NSC大阪42期",
-    "achievements": ["よしもと漫才劇場大賞2025 新人賞"],
-    "description": "漫才劇場の期待の新星。独創的なネタ作りとフレッシュな掛け合いで急速に人気上昇中。",
-    "rank": "C",
     "homeTheater": "manzai-gekijo"
   },
   {
@@ -84,18 +84,6 @@
     "homeTheater": "manzai-gekijo"
   },
   {
-    "id": "maruhon",
-    "name": "ニッポンの社長",
-    "members": ["辻", "ケツ"],
-    "formation": 2013,
-    "category": "コント・漫才",
-    "nscYear": "NSC大阪35期",
-    "achievements": ["キングオブコント2024 決勝進出", "ABCお笑いグランプリ2021 決勝進出"],
-    "description": "コントも漫才もこなす実力派。独特の世界観と爆発力のあるネタで漫才劇場を沸かせている。",
-    "rank": "B",
-    "homeTheater": "manzai-gekijo"
-  },
-  {
     "id": "warainu",
     "name": "ロングコートダディ",
     "members": ["堂前透", "兎"],
@@ -105,6 +93,42 @@
     "achievements": ["M-1グランプリ2022 決勝進出", "キングオブコント2021 準優勝"],
     "description": "漫才もコントも高いレベルでこなす二刀流コンビ。堂前の独特なワードセンスが人気。漫才劇場の人気者。",
     "rank": "A",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "drass",
+    "name": "ドレス",
+    "members": ["ナオキ", "信太"],
+    "formation": 2014,
+    "category": "漫才",
+    "nscYear": "NSC大阪37期",
+    "achievements": ["M-1グランプリ2024 準決勝進出", "ytv漫才新人賞2023 決勝進出"],
+    "description": "ナオキのキャラクターを活かした独特の間と空気感のある漫才が持ち味。漫才劇場で確実に実力をつけ、賞レースでも結果を出し始めている。",
+    "rank": "A",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "daihinmin",
+    "name": "ダイタク",
+    "members": ["ダイ", "タク"],
+    "formation": 2010,
+    "category": "漫才",
+    "nscYear": "NSC大阪33期",
+    "achievements": ["M-1グランプリ2024 準決勝進出", "NHK上方漫才コンテスト 決勝進出"],
+    "description": "双子の兄弟コンビ。息の合ったテンポと独特の間で漫才劇場のベテラン枠として活躍。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "maruhon",
+    "name": "ニッポンの社長",
+    "members": ["辻", "ケツ"],
+    "formation": 2013,
+    "category": "コント・漫才",
+    "nscYear": "NSC大阪35期",
+    "achievements": ["キングオブコント2024 決勝進出", "ABCお笑いグランプリ2021 決勝進出"],
+    "description": "コントも漫才もこなす実力派。独特の世界観と爆発力のあるネタで漫才劇場を沸かせている。",
+    "rank": "B",
     "homeTheater": "manzai-gekijo"
   },
   {
@@ -120,7 +144,115 @@
     "homeTheater": "manzai-gekijo"
   },
   {
-    "id": "tento",
+    "id": "taikou",
+    "name": "タイムキーパー",
+    "members": ["カワノ", "ムカイ"],
+    "formation": 2016,
+    "category": "漫才",
+    "nscYear": "NSC大阪39期",
+    "achievements": ["M-1グランプリ2025 準々決勝進出"],
+    "description": "テンポの速い漫才が武器。漫才劇場のバトルライブで常に上位に入る安定感のあるコンビ。着実にファンを増やしている。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "danvine",
+    "name": "ダンビラムーチョ",
+    "members": ["大原優一", "原田フニャオ"],
+    "formation": 2011,
+    "category": "漫才",
+    "nscYear": "NSC大阪34期",
+    "achievements": ["M-1グランプリ2023 準決勝進出", "よしもと漫才劇場大賞2022 大賞"],
+    "description": "歌ネタとしゃべくり漫才を融合させた独自のスタイル。漫才劇場大賞を受賞し、劇場を代表するコンビに成長。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "tachinbo",
+    "name": "タチマチ",
+    "members": ["ケン", "リク"],
+    "formation": 2015,
+    "category": "漫才",
+    "nscYear": "NSC大阪38期",
+    "achievements": ["ABCお笑いグランプリ2024 決勝進出"],
+    "description": "理論派のネタ作りで知られるコンビ。計算し尽くされた構成と意外性のあるオチで玄人筋からの評価が高い。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "chouhatsu",
+    "name": "ヘンダーソン",
+    "members": ["子森", "中村"],
+    "formation": 2014,
+    "category": "漫才",
+    "nscYear": "NSC大阪36期",
+    "achievements": ["M-1グランプリ2024 準決勝進出", "よしもと漫才劇場大賞2024 大賞"],
+    "description": "中村の愛されキャラクターと子森のキレキレのツッコミが光るコンビ。漫才劇場大賞2024を受賞し、勢いに乗っている。",
+    "rank": "B",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "danchizuma",
+    "name": "ドーナツ・ピーナツ",
+    "members": ["ドーナツ", "ピーナツ"],
+    "formation": 2019,
+    "category": "漫才",
+    "nscYear": "NSC大阪42期",
+    "achievements": ["よしもと漫才劇場大賞2025 新人賞"],
+    "description": "漫才劇場の期待の新星。独創的なネタ作りとフレッシュな掛け合いで急速に人気上昇中。",
+    "rank": "C",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "kaimono",
+    "name": "カイモノ",
+    "members": ["たくま", "しげる"],
+    "formation": 2018,
+    "category": "漫才",
+    "nscYear": "NSC大阪41期",
+    "achievements": ["M-1グランプリ2025 3回戦進出"],
+    "description": "日常の何気ないシチュエーションを切り取った親しみやすい漫才が持ち味。漫才劇場の常連で堅実にファンを増やしている。",
+    "rank": "C",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "musicair",
+    "name": "ミュージックエア",
+    "members": ["高橋ひろし", "鈴木たける"],
+    "formation": 2019,
+    "category": "漫才",
+    "nscYear": "NSC大阪42期",
+    "achievements": ["漫才劇場マンスリーバトル 2025年1月 優勝"],
+    "description": "音楽ネタと正統派漫才を使い分ける器用なコンビ。マンスリーバトルの常連で、劇場での安定感は抜群。",
+    "rank": "C",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "wabisabi",
+    "name": "ワビサビ",
+    "members": ["佐々木", "小林"],
+    "formation": 2020,
+    "category": "漫才",
+    "nscYear": "NSC大阪43期",
+    "achievements": ["漫才劇場新人バトル 2024 優勝"],
+    "description": "渋めのテーマを若い感性で料理する独特のスタイル。新人バトルを制した実力は本物で、Cランクへの昇格も最速だった。",
+    "rank": "C",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "spicecurry",
+    "name": "スパイスカレー",
+    "members": ["辛口", "甘口"],
+    "formation": 2020,
+    "category": "漫才",
+    "nscYear": "NSC大阪43期",
+    "achievements": ["M-1グランプリ2025 2回戦進出"],
+    "description": "名前の通りピリッとスパイスの効いたボケが特徴。テンポの緩急をつけた漫才で漫才劇場の中堅として活躍中。",
+    "rank": "C",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "tent",
     "name": "テント",
     "members": ["桑原雅人", "清水大輔"],
     "formation": 2021,
@@ -139,7 +271,7 @@
     "category": "漫才",
     "nscYear": "NSC大阪45期",
     "achievements": ["漫才劇場バトルライブ 月間MVP 2026年1月"],
-    "description": "とにかく明るくノリの良い漫才が武器の超若手コンビ。客席を巻き込むパワーで、先輩芸人からも「おもろい」と評判。出番が来ると客席の空気が一変する。",
+    "description": "とにかく明るくノリの良い漫才が武器の超若手コンビ。客席を巻き込むパワーで先輩芸人からも「おもろい」と評判。",
     "rank": "D",
     "homeTheater": "manzai-gekijo"
   },
@@ -151,7 +283,7 @@
     "category": "漫才",
     "nscYear": "NSC大阪45期",
     "achievements": ["NSC大阪45期 卒業ライブ 最優秀賞"],
-    "description": "名古屋出身の2人が大阪で結成した変わり種コンビ。地元ネタを織り交ぜた親しみやすい漫才で劇場の常連客に愛されている。卒業ライブ最優秀賞の実力派。",
+    "description": "名古屋出身の2人が大阪で結成した変わり種コンビ。地元ネタを織り交ぜた親しみやすい漫才で劇場の常連客に愛されている。",
     "rank": "D",
     "homeTheater": "manzai-gekijo"
   },
@@ -163,7 +295,7 @@
     "category": "漫才",
     "nscYear": "NSC大阪46期",
     "achievements": [],
-    "description": "脱サラして芸人になった異色の経歴コンビ。社会人あるあるをベースにしたネタが同世代に刺さると話題。漫才劇場の新ネタライブの常連で着実に場数を踏んでいる。",
+    "description": "脱サラして芸人になった異色の経歴コンビ。社会人あるあるをベースにしたネタが同世代に刺さると話題。",
     "rank": "D",
     "homeTheater": "manzai-gekijo"
   },
@@ -175,7 +307,7 @@
     "category": "漫才",
     "nscYear": "NSC大阪44期",
     "achievements": ["M-1グランプリ2025 2回戦進出"],
-    "description": "ボケとツッコミが目まぐるしく入れ替わるスイッチ漫才が持ち味。同期のテントとは良きライバル関係。漫才劇場のバトルライブで勝率が高く、実力を評価されている。",
+    "description": "ボケとツッコミが目まぐるしく入れ替わるスイッチ漫才が持ち味。同期のテントとは良きライバル関係。",
     "rank": "D",
     "homeTheater": "manzai-gekijo"
   },
@@ -187,7 +319,7 @@
     "category": "漫才",
     "nscYear": "NSC大阪46期",
     "achievements": [],
-    "description": "NSC46期の最注目ルーキー。入学当初から同期の中で圧倒的な存在感を見せ、異例のスピードで漫才劇場の舞台に立つようになった。シンプルだが破壊力のある漫才が魅力。",
+    "description": "NSC46期の最注目ルーキー。入学当初から圧倒的な存在感を見せ、異例のスピードで漫才劇場の舞台に立つようになった。",
     "rank": "D",
     "homeTheater": "manzai-gekijo"
   },
@@ -199,7 +331,7 @@
     "category": "コント・漫才",
     "nscYear": "NSC大阪45期",
     "achievements": ["漫才劇場新人バトル 2025 準優勝"],
-    "description": "コントと漫才の両方をこなす器用なコンビ。丸山の独特な佇まいから繰り出されるシュールなボケが癖になると若い女性ファンが急増中。SNSのフォロワーも伸びている。",
+    "description": "コントと漫才の両方をこなす器用なコンビ。丸山の独特な佇まいから繰り出されるシュールなボケが癖になると若い女性ファンが急増中。",
     "rank": "D",
     "homeTheater": "manzai-gekijo"
   },
@@ -211,7 +343,55 @@
     "category": "ピン芸人",
     "nscYear": "NSC大阪44期",
     "achievements": ["R-1グランプリ2026 2回戦進出"],
-    "description": "漫才劇場では珍しいピン芸人。フリップネタとものまねを組み合わせた独自のスタイルで、ネタライブに欠かせない存在になりつつある。R-1グランプリにも挑戦中。",
+    "description": "漫才劇場では珍しいピン芸人。フリップネタとものまねを組み合わせた独自のスタイルで存在感を発揮。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "flashmob",
+    "name": "フラッシュモブ",
+    "members": ["矢野アキラ", "堀タケシ"],
+    "formation": 2021,
+    "category": "漫才",
+    "nscYear": "NSC大阪44期",
+    "achievements": ["M-1グランプリ2025 2回戦進出"],
+    "description": "突然テンションが上がる予測不能なボケが持ち味。劇場のお客さんを驚かせることに命をかけている。同期の中で最もライブ本数が多い努力家。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "tsunagari",
+    "name": "つながり",
+    "members": ["まさる", "こうた"],
+    "formation": 2022,
+    "category": "漫才",
+    "nscYear": "NSC大阪45期",
+    "achievements": [],
+    "description": "幼馴染コンビ。小学校からの付き合いで培った抜群のコンビネーションが武器。ほのぼのとした雰囲気の漫才で劇場に温かい空気を作る。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "dynamite",
+    "name": "ダイナマイトキッズ",
+    "members": ["爆田", "轟木"],
+    "formation": 2023,
+    "category": "漫才",
+    "nscYear": "NSC大阪46期",
+    "achievements": [],
+    "description": "NSC46期の爆裂コンビ。とにかく声がデカくて勢いがある。荒削りだが爆発力は同期随一で、先輩芸人からも「化ける可能性がある」と期待されている。",
+    "rank": "D",
+    "homeTheater": "manzai-gekijo"
+  },
+  {
+    "id": "engawa",
+    "name": "エンガワ",
+    "members": ["縁側", "広縁"],
+    "formation": 2023,
+    "category": "漫才",
+    "nscYear": "NSC大阪46期",
+    "achievements": [],
+    "description": "ゆるいテンポの脱力系漫才が持ち味のNSC46期コンビ。独特の間で笑いを取るスタイルは好みが分かれるが、ハマる人は中毒になるとコアなファンがつき始めている。",
     "rank": "D",
     "homeTheater": "manzai-gekijo"
   }
