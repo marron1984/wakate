@@ -4,33 +4,22 @@ import comediansData from '../data/comedians.json'
 
 function getCategoryColor(category) {
   switch (category) {
-    case '公演情報': return 'bg-yoshimoto-red text-white'
-    case 'イベント': return 'bg-yoshimoto-gold text-white'
-    case 'メディア': return 'bg-blue-500 text-white'
-    case '受賞': return 'bg-purple-500 text-white'
-    case '注目若手': return 'bg-emerald-500 text-white'
-    case 'ニュース': return 'bg-gray-600 text-white'
-    default: return 'bg-gray-200 text-gray-700'
+    case '公演情報': return 'bg-accent/10 text-accent'
+    case 'イベント': return 'bg-gold/10 text-gold'
+    case 'メディア': return 'bg-blue-500/10 text-blue-400'
+    case '受賞': return 'bg-purple-500/10 text-purple-400'
+    case '注目若手': return 'bg-mint/10 text-mint'
+    case 'ニュース': return 'bg-white/5 text-muted'
+    default: return 'bg-white/5 text-muted'
   }
 }
 
 function getStatusColor(status) {
   switch (status) {
-    case '販売中': return 'bg-green-500 text-white'
-    case '近日発売': return 'bg-orange-400 text-white'
-    case '完売': return 'bg-gray-500 text-white'
-    default: return 'bg-gray-300 text-gray-700'
-  }
-}
-
-function getEventTypeColor(type) {
-  switch (type) {
-    case 'バトルライブ': return 'bg-red-100 text-red-700 border-red-200'
-    case 'ネタライブ': return 'bg-blue-100 text-blue-700 border-blue-200'
-    case '単独ライブ': return 'bg-purple-100 text-purple-700 border-purple-200'
-    case '企画ライブ': return 'bg-green-100 text-green-700 border-green-200'
-    case '特別公演': return 'bg-yellow-100 text-yellow-700 border-yellow-200'
-    default: return 'bg-gray-100 text-gray-700 border-gray-200'
+    case '販売中': return 'bg-mint/10 text-mint'
+    case '近日発売': return 'bg-gold/10 text-gold'
+    case '完売': return 'bg-white/5 text-muted'
+    default: return 'bg-white/5 text-muted'
   }
 }
 
@@ -44,110 +33,95 @@ export default function Home() {
 
   return (
     <div>
-      {/* ヒーローセクション */}
-      <section className="bg-gradient-to-br from-yoshimoto-black via-gray-800 to-yoshimoto-black text-white rounded-2xl p-8 mb-10">
-        <p className="text-yoshimoto-red font-bold text-sm mb-2 tracking-wider">YOSHIMOTO MANZAI GEKIJO</p>
-        <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-          <span className="text-yoshimoto-red">ワカテ</span>NEWS
-        </h1>
-        <p className="text-gray-300 mb-6 max-w-xl">
-          よしもと漫才劇場の若手芸人にフォーカスした情報サイト。公演スケジュール、芸人プロフィール、最新ニュースをお届けします。
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a href="/events" className="bg-yoshimoto-red hover:bg-red-700 text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
-            公演スケジュール
-          </a>
-          <a href="/comedians" className="border border-white/50 hover:bg-white hover:text-gray-900 text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
-            芸人一覧
-          </a>
-          <a href="/compatibility" className="bg-yoshimoto-gold hover:bg-yellow-600 text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
-            芸人相性診断
-          </a>
-        </div>
-      </section>
-
-      {/* 芸人相性チェック バナー */}
-      <section className="mb-10">
-        <a href="/compatibility" className="block bg-gradient-to-r from-yoshimoto-gold/10 via-yellow-50 to-yoshimoto-gold/10 border-2 border-yoshimoto-gold/30 hover:border-yoshimoto-gold rounded-xl p-6 transition-all group">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-yoshimoto-gold font-bold text-sm mb-1">NEW CONTENT</p>
-              <h3 className="text-xl font-bold mb-1">芸人相性チェック</h3>
-              <p className="text-sm text-gray-500">7つの質問に答えるだけ！あなたと相性バツグンの芸人が見つかる</p>
-            </div>
-            <span className="text-4xl group-hover:scale-110 transition-transform">🎯</span>
+      {/* Hero */}
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface via-surface to-accent/5 border border-border p-10 sm:p-14 mb-12">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+        <div className="relative">
+          <p className="text-accent text-xs font-bold tracking-[0.3em] uppercase mb-4">Yoshimoto Manzai Gekijo</p>
+          <h1 className="text-5xl sm:text-6xl font-black tracking-tighter mb-4">
+            WAKA<span className="text-accent">TE</span>
+          </h1>
+          <p className="text-muted text-sm max-w-md mb-8 leading-relaxed">
+            よしもと漫才劇場の若手芸人にフォーカスした情報サイト。公演スケジュール、芸人プロフィール、最新ニュースをお届け。
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/events" className="btn-primary">公演スケジュール</a>
+            <a href="/comedians" className="btn-outline">芸人一覧</a>
+            <a href="/compatibility" className="bg-gold/10 hover:bg-gold/20 text-gold px-5 py-2.5 rounded-xl font-semibold text-sm transition-all">相性診断</a>
           </div>
-        </a>
+        </div>
       </section>
 
-      {/* 超若手ピックアップ */}
-      <section className="mb-10">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold border-l-4 border-emerald-500 pl-3">
-            超若手ピックアップ
-            <span className="text-sm font-normal text-gray-400 ml-2">- Next Generation -</span>
-          </h2>
-          <a href="/comedians" className="text-sm text-yoshimoto-red hover:underline font-medium">全員見る →</a>
+      {/* Diagnosis Banner */}
+      <a href="/compatibility" className="block group mb-12">
+        <div className="flex items-center justify-between bg-gold/5 border border-gold/20 hover:border-gold/40 rounded-2xl px-6 py-5 transition-all">
+          <div>
+            <p className="text-gold text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Interactive</p>
+            <p className="font-bold text-sm">芸人相性チェック — 7つの質問であなたの推し芸人が見つかる</p>
+          </div>
+          <span className="text-2xl group-hover:translate-x-1 transition-transform">→</span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      </a>
+
+      {/* Rookies */}
+      <section className="mb-14">
+        <div className="flex items-end justify-between mb-6">
+          <div>
+            <p className="text-mint text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Next Generation</p>
+            <h2 className="section-title">超若手ピックアップ</h2>
+          </div>
+          <a href="/comedians#rank-D" className="btn-ghost text-xs">View all →</a>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {rookies.map((comedian) => (
             <a
               key={comedian.id}
               href={`/comedians/${comedian.id}`}
-              className="bg-gradient-to-b from-white to-gray-50 rounded-lg border-2 border-transparent hover:border-emerald-400 p-4 shadow-sm hover:shadow-md transition-all"
+              className="group bg-surface border border-border rounded-2xl p-4 hover:border-mint/40 transition-all"
             >
-              <div className="text-center mb-2">
-                <span className="text-3xl">{comedian.category === 'ピン芸人' ? '🎙️' : comedian.category.includes('コント') ? '🎬' : '🎤'}</span>
-              </div>
-              <h3 className="font-bold text-center text-sm mb-1">{comedian.name}</h3>
-              <p className="text-xs text-gray-500 text-center mb-2">{comedian.nscYear}</p>
-              <span className="block text-center">
-                <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-medium">D・超若手</span>
-              </span>
+              <p className="font-bold text-sm mb-1 group-hover:text-mint transition-colors">{comedian.name}</p>
+              <p className="text-[11px] text-muted mb-2">{comedian.nscYear}</p>
+              <span className="tag bg-mint/10 text-mint">D</span>
               {comedian.achievements[0] && (
-                <p className="text-xs text-yoshimoto-red text-center mt-2 line-clamp-1">🏆 {comedian.achievements[0]}</p>
+                <p className="text-[11px] text-accent mt-2 line-clamp-1">{comedian.achievements[0]}</p>
               )}
             </a>
           ))}
         </div>
       </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* メインカラム: ニュース */}
-        <div className="lg:col-span-2">
-          <h2 className="text-2xl font-bold mb-6 border-l-4 border-yoshimoto-red pl-3">最新ニュース</h2>
-          <div className="space-y-4">
-            {newsData.slice(0, 15).map((news) => {
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        {/* News */}
+        <div className="lg:col-span-3">
+          <div className="mb-6">
+            <p className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Latest</p>
+            <h2 className="section-title">ニュース</h2>
+          </div>
+          <div className="space-y-3">
+            {newsData.slice(0, 12).map((news) => {
               const comedian = news.comedianId
                 ? comediansData.find(c => c.id === news.comedianId)
                 : null
               return (
-                <article key={news.id} className={`card ${news.event ? 'border-l-4 border-l-yoshimoto-red' : ''}`}>
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className={`badge ${getCategoryColor(news.category)}`}>
-                      {news.category}
-                    </span>
-                    <time className="text-sm text-gray-400">{news.date}</time>
+                <article key={news.id} className={`card ${news.event ? 'border-l-2 border-l-accent' : ''}`}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className={`badge ${getCategoryColor(news.category)}`}>{news.category}</span>
+                    <time className="text-[11px] text-muted">{news.date}</time>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{news.title}</h3>
-                  <p className="text-gray-600 text-sm">{news.summary}</p>
+                  <h3 className="font-bold text-sm mb-1.5 leading-snug">{news.title}</h3>
+                  <p className="text-xs text-muted leading-relaxed">{news.summary}</p>
                   {news.event && (
-                    <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
-                      <span className="bg-gray-100 px-2 py-1 rounded">📅 {news.event.date}</span>
-                      <span className="bg-gray-100 px-2 py-1 rounded">🕐 {news.event.time}〜</span>
-                      <span className="bg-gray-100 px-2 py-1 rounded">💴 ¥{news.event.price.toLocaleString()}</span>
-                      <span className="bg-gray-100 px-2 py-1 rounded">📍 {news.event.theater}</span>
-                      <span className={`px-2 py-1 rounded font-medium ${getStatusColor(news.event.status)}`}>
-                        {news.event.status}
-                      </span>
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      <span className="tag">{news.event.date}</span>
+                      <span className="tag">{news.event.time}〜</span>
+                      <span className="tag">¥{news.event.price.toLocaleString()}</span>
+                      <span className="tag">{news.event.theater}</span>
+                      <span className={`badge text-[10px] ${getStatusColor(news.event.status)}`}>{news.event.status}</span>
                     </div>
                   )}
                   {comedian && (
-                    <a
-                      href={`/comedians/${comedian.id}`}
-                      className="inline-block mt-3 text-sm text-yoshimoto-red hover:underline font-medium"
-                    >
-                      {comedian.name} のプロフィール →
+                    <a href={`/comedians/${comedian.id}`} className="inline-block mt-2 text-xs text-accent hover:underline">
+                      {comedian.name} →
                     </a>
                   )}
                 </article>
@@ -156,44 +130,46 @@ export default function Home() {
           </div>
         </div>
 
-        {/* サイドバー */}
-        <aside>
-          {/* 直近の公演 */}
-          <h2 className="text-2xl font-bold mb-6 border-l-4 border-yoshimoto-gold pl-3">直近の公演</h2>
-          <div className="space-y-3">
-            {upcomingEvents.map((event) => (
-              <a key={event.id} href="/events" className="block card py-4 hover:border-yoshimoto-red border-2 border-transparent">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`text-xs px-2 py-0.5 rounded border font-medium ${getEventTypeColor(event.type)}`}>
-                    {event.type}
-                  </span>
-                  {event.status === '販売中' && (
-                    <span className="text-xs px-2 py-0.5 rounded bg-green-500 text-white">販売中</span>
-                  )}
-                </div>
-                <p className="font-bold text-sm mb-1">{event.title}</p>
-                <p className="text-xs text-gray-500">
-                  📅 {event.date} {event.startTime}〜 ／ ¥{event.price.toLocaleString()}
-                </p>
-              </a>
-            ))}
+        {/* Sidebar */}
+        <aside className="lg:col-span-2 space-y-10">
+          {/* Events */}
+          <div>
+            <div className="mb-4">
+              <p className="text-gold text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Upcoming</p>
+              <h2 className="section-title">直近の公演</h2>
+            </div>
+            <div className="space-y-2">
+              {upcomingEvents.map((event) => (
+                <a key={event.id} href="/events" className="block card group">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="tag">{event.type}</span>
+                    {event.status === '販売中' && <span className="badge bg-mint/10 text-mint text-[10px]">ON SALE</span>}
+                  </div>
+                  <p className="font-semibold text-sm group-hover:text-accent transition-colors">{event.title}</p>
+                  <p className="text-[11px] text-muted mt-1">{event.date} {event.startTime}〜 ／ ¥{event.price.toLocaleString()}</p>
+                </a>
+              ))}
+            </div>
+            <a href="/events" className="btn-ghost text-xs mt-3 inline-block">All events →</a>
           </div>
-          <a href="/events" className="block text-center text-sm text-yoshimoto-red hover:underline mt-4 font-medium">
-            すべての公演を見る →
-          </a>
 
-          {/* 注目の芸人 */}
-          <h2 className="text-2xl font-bold mb-4 mt-8 border-l-4 border-yoshimoto-red pl-3">注目の芸人</h2>
-          <div className="space-y-3">
-            {comediansData.filter(c => c.rank === 'A').slice(0, 4).map((comedian) => (
-              <a key={comedian.id} href={`/comedians/${comedian.id}`} className="block card py-3 hover:border-yoshimoto-red border-2 border-transparent">
-                <p className="font-bold text-sm">{comedian.name}</p>
-                <p className="text-xs text-gray-500">{comedian.members.join('・')} ／ {comedian.category}</p>
-                {comedian.achievements[0] && (
-                  <p className="text-xs text-yoshimoto-red mt-1">🏆 {comedian.achievements[0]}</p>
-                )}
-              </a>
-            ))}
+          {/* Featured */}
+          <div>
+            <div className="mb-4">
+              <p className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Featured</p>
+              <h2 className="section-title">注目の芸人</h2>
+            </div>
+            <div className="space-y-2">
+              {comediansData.filter(c => c.rank === 'A').slice(0, 4).map((comedian) => (
+                <a key={comedian.id} href={`/comedians/${comedian.id}`} className="block card group">
+                  <p className="font-semibold text-sm group-hover:text-accent transition-colors">{comedian.name}</p>
+                  <p className="text-[11px] text-muted">{comedian.members.join(' / ')} — {comedian.category}</p>
+                  {comedian.achievements[0] && (
+                    <p className="text-[11px] text-accent mt-1">{comedian.achievements[0]}</p>
+                  )}
+                </a>
+              ))}
+            </div>
           </div>
         </aside>
       </div>

@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-bg text-white antialiased;
+  }
+  ::selection {
+    @apply bg-accent/30;
+  }
+  * {
+    @apply border-border;
   }
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-6;
+    @apply bg-surface border border-border rounded-2xl p-5 transition-all duration-200 hover:border-border-hover hover:bg-surface-hover;
   }
   .badge {
-    @apply inline-block px-3 py-1 text-sm font-semibold rounded-full;
+    @apply inline-flex items-center px-2.5 py-0.5 text-xs font-semibold rounded-full tracking-wide;
   }
-  .badge-red {
-    @apply badge bg-yoshimoto-red text-white;
+  .tag {
+    @apply inline-flex items-center px-2 py-0.5 text-[11px] font-medium rounded-md bg-white/5 text-muted;
   }
-  .badge-gold {
-    @apply badge bg-yoshimoto-gold text-white;
+  .btn-primary {
+    @apply bg-accent hover:bg-accent/90 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:shadow-lg hover:shadow-accent/20;
   }
-  .badge-gray {
-    @apply badge bg-gray-200 text-gray-700;
+  .btn-outline {
+    @apply border border-border hover:border-accent/50 hover:text-accent text-white/80 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200;
+  }
+  .btn-ghost {
+    @apply text-muted hover:text-white text-sm font-medium transition-colors;
+  }
+  .section-title {
+    @apply text-xl font-bold tracking-tight;
   }
 }

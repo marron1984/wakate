@@ -1,107 +1,67 @@
 import comediansData from '../../data/comedians.json'
 
-export const metadata = {
-  title: '芸人一覧 - ワカテNEWS',
-}
+export const metadata = { title: '芸人一覧 — WAKATE' }
 
-function getRankBadge(rank) {
+function getRankStyle(rank) {
   switch (rank) {
-    case 'S': return 'bg-yoshimoto-gold text-white'
-    case 'A': return 'bg-yoshimoto-red text-white'
-    case 'B': return 'bg-blue-500 text-white'
-    case 'C': return 'bg-green-500 text-white'
-    case 'D': return 'bg-emerald-500 text-white'
-    default: return 'bg-gray-300 text-gray-700'
+    case 'S': return { badge: 'bg-gold/10 text-gold', hover: 'hover:border-gold/40' }
+    case 'A': return { badge: 'bg-accent/10 text-accent', hover: 'hover:border-accent/40' }
+    case 'B': return { badge: 'bg-blue-500/10 text-blue-400', hover: 'hover:border-blue-500/40' }
+    case 'C': return { badge: 'bg-purple-500/10 text-purple-400', hover: 'hover:border-purple-500/40' }
+    case 'D': return { badge: 'bg-mint/10 text-mint', hover: 'hover:border-mint/40' }
+    default: return { badge: 'bg-white/5 text-muted', hover: 'hover:border-border-hover' }
   }
 }
 
-function getRankLabel(rank) {
-  switch (rank) {
-    case 'S': return 'レジェンド'
-    case 'A': return '看板'
-    case 'B': return '中堅'
-    case 'C': return '若手'
-    case 'D': return '超若手'
-    default: return ''
-  }
+function getRankLabel(r) {
+  return { S: 'Legend', A: 'Top', B: 'Middle', C: 'Rising', D: 'Rookie' }[r] || ''
 }
 
 export default function ComediansPage() {
-  const rankOrder = { S: 0, A: 1, B: 2, C: 3, D: 4 }
-  const sortedComedians = [...comediansData].sort(
-    (a, b) => (rankOrder[a.rank] ?? 99) - (rankOrder[b.rank] ?? 99)
-  )
-
   const ranks = ['S', 'A', 'B', 'C', 'D']
-  const comediansByRank = ranks.reduce((acc, rank) => {
-    acc[rank] = sortedComedians.filter(c => c.rank === rank)
-    return acc
-  }, {})
+  const byRank = ranks.reduce((a, r) => { a[r] = comediansData.filter(c => c.rank === r); return a }, {})
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">芸人一覧</h1>
-      <p className="text-gray-500 mb-4">よしもと漫才劇場で活躍する芸人たち（全{comediansData.length}組）</p>
+      <p className="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Comedians</p>
+      <h1 className="text-3xl font-black tracking-tight mb-2">芸人一覧</h1>
+      <p className="text-sm text-muted mb-4">{comediansData.length} acts at よしもと漫才劇場</p>
 
-      {/* ランク凡例 */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        {ranks.map((rank) => (
-          <a
-            key={rank}
-            href={`#rank-${rank}`}
-            className={`badge text-xs ${getRankBadge(rank)} hover:opacity-80 transition-opacity`}
-          >
-            {rank}・{getRankLabel(rank)}（{comediansByRank[rank].length}組）
+      <div className="flex flex-wrap gap-1.5 mb-10">
+        {ranks.map((r) => (
+          <a key={r} href={`#rank-${r}`} className={`badge ${getRankStyle(r).badge}`}>
+            {r} · {getRankLabel(r)}（{byRank[r].length}）
           </a>
         ))}
       </div>
 
       {ranks.map((rank) => {
-        const comedians = comediansByRank[rank]
-        if (comedians.length === 0) return null
-
+        const list = byRank[rank]
+        if (!list.length) return null
+        const style = getRankStyle(rank)
         return (
-          <section key={rank} id={`rank-${rank}`} className="mb-10">
-            <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-              <span className={`badge ${getRankBadge(rank)}`}>{rank}</span>
-              <span>{getRankLabel(rank)}</span>
-              <span className="text-sm font-normal text-gray-400">（{comedians.length}組）</span>
-            </h2>
-
-            <div className={`grid gap-4 ${rank === 'D' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2'}`}>
-              {comedians.map((comedian) => (
-                <a
-                  key={comedian.id}
-                  href={`/comedians/${comedian.id}`}
-                  className={`card hover:border-2 border-2 border-transparent ${
-                    rank === 'D' ? 'hover:border-emerald-400' : 'hover:border-yoshimoto-red'
-                  }`}
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">{comedian.category === 'ピン芸人' ? '🎙️' : comedian.category.includes('コント') ? '🎬' : '🎤'}</span>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <h3 className={`font-bold truncate ${rank === 'D' ? 'text-base' : 'text-xl'}`}>{comedian.name}</h3>
-                      </div>
-                      <p className="text-sm text-gray-500">
-                        {comedian.members.join('・')} ／ {comedian.category}
-                      </p>
-                    </div>
+          <section key={rank} id={`rank-${rank}`} className="mb-12">
+            <div className="flex items-center gap-3 mb-5">
+              <span className={`badge ${style.badge}`}>{rank}</span>
+              <span className="font-bold text-sm">{getRankLabel(rank)}</span>
+              <span className="text-xs text-muted">{list.length} acts</span>
+              <div className="flex-1 h-px bg-border" />
+            </div>
+            <div className={`grid gap-3 ${rank === 'D' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2'}`}>
+              {list.map((c) => (
+                <a key={c.id} href={`/comedians/${c.id}`} className={`card group ${style.hover}`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className={`font-bold group-hover:text-accent transition-colors ${rank === 'D' ? 'text-sm' : 'text-base'}`}>{c.name}</h3>
+                    <span className="tag">{c.category}</span>
                   </div>
-
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{comedian.description}</p>
-
-                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-400 mb-2">
-                    <span>{comedian.nscYear}</span>
-                    <span>{comedian.formation}年結成</span>
+                  <p className="text-xs text-muted mb-2">{c.members.join(' / ')}</p>
+                  <p className="text-xs text-muted/70 mb-2 line-clamp-2">{c.description}</p>
+                  <div className="flex flex-wrap gap-2 text-[11px] text-muted">
+                    <span>{c.nscYear}</span>
+                    <span>{c.formation}年〜</span>
                   </div>
-
-                  {comedian.achievements.length > 0 && (
-                    <div className="space-y-1">
-                      {comedian.achievements.slice(0, rank === 'D' ? 1 : 2).map((a) => (
-                        <p key={a} className="text-xs font-medium text-yoshimoto-red">🏆 {a}</p>
-                      ))}
-                    </div>
+                  {c.achievements[0] && (
+                    <p className="text-[11px] text-accent mt-2">{c.achievements[0]}</p>
                   )}
                 </a>
               ))}

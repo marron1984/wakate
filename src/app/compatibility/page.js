@@ -7,125 +7,87 @@ import comediansData from '../../data/comedians.json'
 const questions = compatibilityData.questions
 const results = compatibilityData.results
 
-function getTypeEmoji(type) {
-  switch (type) {
-    case 'energy': return '🔥'
-    case 'classic': return '🎙️'
-    case 'unique': return '🌀'
-    case 'intellectual': return '🧠'
-    case 'warm': return '☀️'
-    default: return '🎤'
-  }
-}
-
 function getTypeColor(type) {
   switch (type) {
-    case 'energy': return { bg: 'bg-red-500', light: 'bg-red-50', border: 'border-red-400', text: 'text-red-600' }
-    case 'classic': return { bg: 'bg-yoshimoto-gold', light: 'bg-yellow-50', border: 'border-yellow-400', text: 'text-yellow-700' }
-    case 'unique': return { bg: 'bg-purple-500', light: 'bg-purple-50', border: 'border-purple-400', text: 'text-purple-600' }
-    case 'intellectual': return { bg: 'bg-blue-500', light: 'bg-blue-50', border: 'border-blue-400', text: 'text-blue-600' }
-    case 'warm': return { bg: 'bg-orange-400', light: 'bg-orange-50', border: 'border-orange-400', text: 'text-orange-600' }
-    default: return { bg: 'bg-gray-500', light: 'bg-gray-50', border: 'border-gray-400', text: 'text-gray-600' }
+    case 'energy': return { bg: 'bg-accent', soft: 'bg-accent/10', text: 'text-accent', border: 'border-accent/30' }
+    case 'classic': return { bg: 'bg-gold', soft: 'bg-gold/10', text: 'text-gold', border: 'border-gold/30' }
+    case 'unique': return { bg: 'bg-purple-500', soft: 'bg-purple-500/10', text: 'text-purple-400', border: 'border-purple-500/30' }
+    case 'intellectual': return { bg: 'bg-blue-500', soft: 'bg-blue-500/10', text: 'text-blue-400', border: 'border-blue-500/30' }
+    case 'warm': return { bg: 'bg-orange-400', soft: 'bg-orange-400/10', text: 'text-orange-400', border: 'border-orange-400/30' }
+    default: return { bg: 'bg-muted', soft: 'bg-white/5', text: 'text-muted', border: 'border-border' }
   }
 }
 
 function getRankBadge(rank) {
   switch (rank) {
-    case 'S': return 'bg-yoshimoto-gold text-white'
-    case 'A': return 'bg-yoshimoto-red text-white'
-    case 'B': return 'bg-blue-500 text-white'
-    case 'C': return 'bg-green-500 text-white'
-    case 'D': return 'bg-emerald-500 text-white'
-    default: return 'bg-gray-300 text-gray-700'
+    case 'S': return 'bg-gold/10 text-gold'
+    case 'A': return 'bg-accent/10 text-accent'
+    case 'B': return 'bg-blue-500/10 text-blue-400'
+    case 'C': return 'bg-purple-500/10 text-purple-400'
+    case 'D': return 'bg-mint/10 text-mint'
+    default: return 'bg-white/5 text-muted'
   }
 }
 
 export default function CompatibilityPage() {
-  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState([])
   const [result, setResult] = useState(null)
   const [scores, setScores] = useState(null)
 
-  function handleAnswer(option) {
-    const newAnswers = [...answers, option]
-    setAnswers(newAnswers)
-
-    if (currentQuestion + 1 < questions.length) {
-      setCurrentQuestion(currentQuestion + 1)
+  function pick(option) {
+    const next = [...answers, option]
+    setAnswers(next)
+    if (step + 1 < questions.length) {
+      setStep(step + 1)
     } else {
-      calculateResult(newAnswers)
+      const total = { energy: 0, classic: 0, unique: 0, intellectual: 0, warm: 0 }
+      next.forEach(a => Object.entries(a.scores).forEach(([k, v]) => { total[k] += v }))
+      const top = Object.entries(total).reduce((a, b) => a[1] > b[1] ? a : b)[0]
+      setScores(total)
+      setResult(results.find(r => r.type === top))
     }
   }
 
-  function calculateResult(allAnswers) {
-    const totalScores = { energy: 0, classic: 0, unique: 0, intellectual: 0, warm: 0 }
+  function reset() { setStep(0); setAnswers([]); setResult(null); setScores(null) }
 
-    allAnswers.forEach((answer) => {
-      Object.entries(answer.scores).forEach(([key, value]) => {
-        totalScores[key] += value
-      })
-    })
+  const progress = ((step + (result ? 1 : 0)) / questions.length) * 100
 
-    const maxType = Object.entries(totalScores).reduce((a, b) => a[1] > b[1] ? a : b)[0]
-    const matched = results.find(r => r.type === maxType)
-
-    setScores(totalScores)
-    setResult(matched)
-  }
-
-  function handleReset() {
-    setCurrentQuestion(0)
-    setAnswers([])
-    setResult(null)
-    setScores(null)
-  }
-
-  const progress = ((currentQuestion + (result ? 1 : 0)) / questions.length) * 100
-
-  // 結果画面
+  // Result
   if (result) {
-    const color = getTypeColor(result.type)
-    const matchedComedians = result.comedians
-      .map(id => comediansData.find(c => c.id === id))
-      .filter(Boolean)
-
-    const maxScore = Math.max(...Object.values(scores))
-    const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1])
+    const c = getTypeColor(result.type)
+    const matched = result.comedians.map(id => comediansData.find(x => x.id === id)).filter(Boolean)
+    const max = Math.max(...Object.values(scores))
+    const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1])
 
     return (
-      <div>
-        <h1 className="text-3xl font-bold mb-2">芸人相性チェック</h1>
-        <p className="text-gray-500 mb-8">あなたの診断結果</p>
+      <div className="max-w-2xl mx-auto">
+        <p className={`${c.text} text-[10px] font-bold tracking-[0.3em] uppercase mb-2`}>Your Result</p>
+        <h1 className="text-3xl font-black tracking-tight mb-8">診断結果</h1>
 
-        {/* メイン結果 */}
-        <div className={`rounded-2xl ${color.light} border-2 ${color.border} p-8 mb-8 text-center`}>
-          <p className="text-6xl mb-4">{getTypeEmoji(result.type)}</p>
-          <p className={`text-sm font-bold ${color.text} mb-2`}>あなたのお笑いタイプは...</p>
-          <h2 className="text-3xl font-bold mb-4">{result.label}</h2>
-          <p className="text-gray-600 max-w-lg mx-auto leading-relaxed">{result.description}</p>
+        {/* Main result */}
+        <div className={`${c.soft} border ${c.border} rounded-3xl p-8 text-center mb-8`}>
+          <p className={`${c.text} text-[10px] font-bold tracking-[0.2em] uppercase mb-3`}>あなたのお笑いタイプ</p>
+          <h2 className="text-2xl font-black tracking-tight mb-4">{result.label}</h2>
+          <p className="text-sm text-muted leading-relaxed max-w-md mx-auto">{result.description}</p>
         </div>
 
-        {/* スコア内訳 */}
+        {/* Score bars */}
         <div className="card mb-8">
-          <h3 className="font-bold text-lg mb-4">タイプ別スコア</h3>
+          <p className="text-[10px] text-muted uppercase tracking-wider mb-4">Score Breakdown</p>
           <div className="space-y-3">
-            {sortedScores.map(([type, score]) => {
-              const typeResult = results.find(r => r.type === type)
-              const typeColor = getTypeColor(type)
-              const percentage = maxScore > 0 ? (score / maxScore) * 100 : 0
+            {sorted.map(([type, score]) => {
+              const tc = getTypeColor(type)
+              const tr = results.find(r => r.type === type)
+              const pct = max > 0 ? (score / max) * 100 : 0
               return (
                 <div key={type}>
-                  <div className="flex items-center justify-between text-sm mb-1">
-                    <span className="font-medium">
-                      {getTypeEmoji(type)} {typeResult?.label}
-                    </span>
-                    <span className={`font-bold ${typeColor.text}`}>{score}pt</span>
+                  <div className="flex items-center justify-between text-xs mb-1">
+                    <span className={`font-medium ${tc.text}`}>{tr?.label}</span>
+                    <span className="text-muted font-mono">{score}</span>
                   </div>
-                  <div className="w-full bg-gray-100 rounded-full h-3">
-                    <div
-                      className={`${typeColor.bg} h-3 rounded-full transition-all duration-500`}
-                      style={{ width: `${percentage}%` }}
-                    />
+                  <div className="w-full bg-white/5 rounded-full h-1.5">
+                    <div className={`${tc.bg} h-1.5 rounded-full transition-all duration-700`} style={{ width: `${pct}%` }} />
                   </div>
                 </div>
               )
@@ -133,129 +95,82 @@ export default function CompatibilityPage() {
           </div>
         </div>
 
-        {/* マッチした芸人 */}
-        <div className="mb-8">
-          <h3 className="text-xl font-bold mb-4 border-l-4 border-yoshimoto-red pl-3">
-            あなたと相性の良い芸人
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {matchedComedians.map((comedian, index) => (
-              <a
-                key={comedian.id}
-                href={`/comedians/${comedian.id}`}
-                className={`card hover:border-2 border-2 border-transparent ${
-                  index === 0 ? `hover:${color.border} ring-2 ${color.border}` : 'hover:border-yoshimoto-red'
-                } relative`}
-              >
-                {index === 0 && (
-                  <span className={`absolute -top-3 -right-3 ${color.bg} text-white text-xs font-bold px-3 py-1 rounded-full`}>
-                    BEST MATCH
-                  </span>
-                )}
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="text-2xl">🎤</span>
-                  <div>
-                    <h4 className="font-bold">{comedian.name}</h4>
-                    <div className="flex items-center gap-1.5">
-                      <span className={`text-xs px-1.5 py-0.5 rounded ${getRankBadge(comedian.rank)}`}>{comedian.rank}</span>
-                      <span className="text-xs text-gray-500">{comedian.category}</span>
-                    </div>
-                  </div>
+        {/* Matched comedians */}
+        <div className="mb-10">
+          <p className={`${c.text} text-[10px] font-bold tracking-[0.2em] uppercase mb-1`}>Best Match</p>
+          <h3 className="section-title mb-4">相性の良い芸人</h3>
+          <div className="space-y-2">
+            {matched.map((comedian, i) => (
+              <a key={comedian.id} href={`/comedians/${comedian.id}`} className={`card group flex items-center gap-4 ${i === 0 ? `border ${c.border}` : ''}`}>
+                {i === 0 && <span className={`${c.soft} ${c.text} text-[10px] font-bold px-2 py-0.5 rounded-md`}>BEST</span>}
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-sm group-hover:text-accent transition-colors">{comedian.name}</p>
+                  <p className="text-[11px] text-muted">{comedian.members.join(' / ')} — {comedian.category}</p>
                 </div>
-                <p className="text-xs text-gray-500 mb-2">{comedian.members.join('・')}</p>
-                <p className="text-sm text-gray-600 line-clamp-2">{comedian.description}</p>
-                {comedian.achievements[0] && (
-                  <p className="text-xs text-yoshimoto-red mt-2">🏆 {comedian.achievements[0]}</p>
-                )}
+                <span className={`badge text-[10px] ${getRankBadge(comedian.rank)}`}>{comedian.rank}</span>
               </a>
             ))}
           </div>
         </div>
 
-        {/* アクション */}
-        <div className="flex flex-wrap gap-4 justify-center">
-          <button
-            onClick={handleReset}
-            className="bg-yoshimoto-red hover:bg-red-700 text-white px-8 py-3 rounded-lg font-bold transition-colors"
-          >
-            もう一度診断する
-          </button>
-          <a
-            href="/comedians"
-            className="border-2 border-gray-300 hover:border-yoshimoto-red text-gray-700 hover:text-yoshimoto-red px-8 py-3 rounded-lg font-bold transition-colors"
-          >
-            芸人一覧を見る
-          </a>
-          <a
-            href="/events"
-            className="border-2 border-gray-300 hover:border-yoshimoto-red text-gray-700 hover:text-yoshimoto-red px-8 py-3 rounded-lg font-bold transition-colors"
-          >
-            公演スケジュールを見る
-          </a>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <button onClick={reset} className="btn-primary">もう一度</button>
+          <a href="/comedians" className="btn-outline">芸人一覧</a>
+          <a href="/events" className="btn-outline">公演情報</a>
         </div>
       </div>
     )
   }
 
-  // 質問画面
-  const q = questions[currentQuestion]
+  // Question
+  const q = questions[step]
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-2">芸人相性チェック</h1>
-      <p className="text-gray-500 mb-8">7つの質問に答えて、あなたと相性の良い漫才劇場の芸人を見つけよう！</p>
+    <div className="max-w-2xl mx-auto">
+      <p className="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Compatibility Check</p>
+      <h1 className="text-3xl font-black tracking-tight mb-8">芸人相性チェック</h1>
 
-      {/* プログレスバー */}
-      <div className="mb-8">
-        <div className="flex justify-between text-sm text-gray-500 mb-2">
-          <span>Q{currentQuestion + 1} / {questions.length}</span>
-          <span>{Math.round(progress)}%</span>
+      {/* Progress */}
+      <div className="mb-10">
+        <div className="flex justify-between text-xs text-muted mb-2">
+          <span className="font-mono">{step + 1} / {questions.length}</span>
+          <span className="font-mono">{Math.round(progress)}%</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-3">
-          <div
-            className="bg-yoshimoto-red h-3 rounded-full transition-all duration-300"
-            style={{ width: `${progress}%` }}
-          />
+        <div className="w-full bg-white/5 rounded-full h-1">
+          <div className="bg-accent h-1 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
-      {/* 質問カード */}
-      <div className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-6">
-          <p className="text-yoshimoto-red font-bold text-sm mb-3">Question {currentQuestion + 1}</p>
-          <h2 className="text-2xl font-bold mb-8">{q.question}</h2>
-
-          <div className="space-y-3">
-            {q.options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswer(option)}
-                className="w-full text-left bg-gray-50 hover:bg-yoshimoto-red/5 hover:border-yoshimoto-red border-2 border-gray-200 rounded-xl px-6 py-4 transition-all group"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="w-8 h-8 bg-gray-200 group-hover:bg-yoshimoto-red group-hover:text-white rounded-full flex items-center justify-center text-sm font-bold transition-colors">
-                    {String.fromCharCode(65 + index)}
-                  </span>
-                  <span className="font-medium text-gray-700 group-hover:text-gray-900">{option.label}</span>
-                </div>
-              </button>
-            ))}
-          </div>
+      {/* Question */}
+      <div className="card p-8 mb-4">
+        <p className="text-accent text-xs font-bold mb-4 font-mono">Q{step + 1}</p>
+        <h2 className="text-xl font-black tracking-tight mb-8">{q.question}</h2>
+        <div className="space-y-2">
+          {q.options.map((opt, i) => (
+            <button
+              key={i}
+              onClick={() => pick(opt)}
+              className="w-full text-left bg-white/[0.03] hover:bg-accent/5 hover:border-accent/30 border border-border rounded-xl px-5 py-4 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <span className="w-7 h-7 bg-white/5 group-hover:bg-accent group-hover:text-white rounded-lg flex items-center justify-center text-xs font-bold font-mono transition-colors">
+                  {String.fromCharCode(65 + i)}
+                </span>
+                <span className="text-sm text-white/80 group-hover:text-white transition-colors">{opt.label}</span>
+              </div>
+            </button>
+          ))}
         </div>
-
-        {/* 戻るボタン */}
-        {currentQuestion > 0 && (
-          <button
-            onClick={() => {
-              setCurrentQuestion(currentQuestion - 1)
-              setAnswers(answers.slice(0, -1))
-            }}
-            className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
-          >
-            ← 前の質問に戻る
-          </button>
-        )}
       </div>
+
+      {step > 0 && (
+        <button
+          onClick={() => { setStep(step - 1); setAnswers(answers.slice(0, -1)) }}
+          className="btn-ghost text-xs"
+        >
+          ← 前の質問
+        </button>
+      )}
     </div>
   )
 }
