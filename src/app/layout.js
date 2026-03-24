@@ -3,6 +3,7 @@ import { ThemeProvider } from './theme-provider'
 import ThemeSwitcher from './theme-switcher'
 import MobileNav from './mobile-nav'
 import DesktopNav from './desktop-nav'
+import SisterBanner from './sister-banner'
 
 export const metadata = {
   title: 'WAKATE.Fun — よしもと漫才劇場',
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
               </div>
             </nav>
           </header>
+          <SisterBanner />
           <main className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-16 min-h-screen">
             {children}
           </main>
@@ -42,6 +44,9 @@ export default function RootLayout({ children }) {
                 <div>
                   <p className="font-black text-sm tracking-tighter mb-1">WAKATE<span className="t-accent">.Fun</span></p>
                   <p className="text-xs t-muted">※ ファンメイドサイトです。吉本興業公式ではありません。</p>
+                  <a href="https://geinin.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 mt-2 text-xs t-sub hover:opacity-80 transition-opacity">
+                    姉妹サイト: <span className="font-bold">GEININ.Fun</span> →
+                  </a>
                 </div>
                 <div className="flex flex-wrap gap-x-6 gap-y-3 text-xs t-muted">
                   <div className="space-y-1.5">
