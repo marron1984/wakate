@@ -76,7 +76,18 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 .animate-fade-in { animation: fadeIn 0.3s ease-out both; }
+.ticker-track {
+  display: inline-block;
+  animation: tickerScroll 30s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
 .delay-1 { animation-delay: 0.03s; }
 .delay-2 { animation-delay: 0.06s; }
 .delay-3 { animation-delay: 0.09s; }

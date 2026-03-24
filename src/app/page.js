@@ -2,6 +2,7 @@ import newsData from '../data/news.json'
 import eventsData from '../data/events.json'
 import comediansData from '../data/comedians.json'
 import interviewsData from '../data/interviews.json'
+import NewsTicker from './news-ticker'
 
 function getCategoryStyle(cat) {
   switch (cat) {
@@ -26,6 +27,9 @@ export default function Home() {
 
   return (
     <div>
+      {/* News ticker */}
+      <NewsTicker news={newsData} />
+
       {/* Pickup Interview (top feature) */}
       {feat && (
         <a href={`/interviews/${feat.id}`} className="block mb-8 animate-fade-in">
