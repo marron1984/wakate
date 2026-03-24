@@ -6,7 +6,7 @@ import ThemeSwitcher from './theme-switcher'
 const moreItems = [
   { href: '/nsc', label: 'NSC期別' },
   { href: '/calendar', label: 'カレンダー' },
-  { href: '/theaters', label: '劇場案内' },
+  { href: '/theaters', label: '全国劇場' },
   { href: '/glossary', label: '用語辞典' },
   { href: '/sns', label: 'SNSまとめ' },
 ]

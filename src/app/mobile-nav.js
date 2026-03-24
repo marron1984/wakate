@@ -15,7 +15,7 @@ const navGroups = [
     items: [
       { href: '/events', label: '公演情報' },
       { href: '/calendar', label: 'カレンダー' },
-      { href: '/theaters', label: '劇場案内' },
+      { href: '/theaters', label: '全国劇場' },
     ],
   },
   {

@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
                     <p className="text-[10px] font-bold tracking-wider t-accent">公演</p>
                     <a href="/events" className="block hover:text-[rgb(var(--text))] transition-colors">公演情報</a>
                     <a href="/calendar" className="block hover:text-[rgb(var(--text))] transition-colors">カレンダー</a>
-                    <a href="/theaters" className="block hover:text-[rgb(var(--text))] transition-colors">劇場案内</a>
+                    <a href="/theaters" className="block hover:text-[rgb(var(--text))] transition-colors">全国劇場</a>
                   </div>
                   <div className="space-y-1.5">
                     <p className="text-[10px] font-bold tracking-wider t-accent">芸人</p>
